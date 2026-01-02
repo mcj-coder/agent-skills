@@ -53,6 +53,7 @@ checks (git hooks) are efficient by only targeting staged files.
 2. **Implementation**: Configure or update the local development tools to enforce repository standards (e.g., husky hooks, linting rules).
    - **Efficiency**: Use tools like `lint-staged` to ensure that pre-commit hooks only run on the files being committed, preventing unnecessary whole-repo scans.
    - **Ordering**: Prefer a specialized tool if it can format; only add a general formatter (respecting `.editorconfig` or equivalent) when the specialized tool cannot, and run the specialized tool last.
+   - **Consistency**: If checks depend on runtime versions, ensure repo pins are documented and align with `runtime-tooling-validation`.
 3. **Verification**: Manually trigger a violation (e.g., bad formatting, lint error) in a staged file and verify that the local checks correctly identify and block it, while ignoring violations in unstaged files.
 4. **Documentation**: Update the `README.md` or dedicated development docs with instructions on how to set up and use the tools.
 5. **Review**: Tech Lead and Developer Representative review the setup for usability and effectiveness.
