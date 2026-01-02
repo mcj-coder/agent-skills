@@ -36,7 +36,7 @@ reuse across multiple slices/projects is proven and stable.
 
 Architectural changes or significant design decisions must be documented as Architecture Decision Records (ADR) in `docs/adr/`.
 
-- Use `templates/adr_template.md` as a starting point.
+- Use `skills/documentation-as-code/templates/adr_template.md` as a starting point.
 - ADRs provide a historical record of why decisions were made, helping to prevent "re-deciding" and ensuring context is preserved.
 - Reference relevant skills in the ADR to demonstrate alignment with the library's principles.
 
