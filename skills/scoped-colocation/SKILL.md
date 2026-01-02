@@ -11,6 +11,7 @@ description: >
 # Scoped Colocation & Vertical-Slice Architecture
 
 ## Intent
+
 Ensure deliverable functionality is organised as atomic vertical slices, with
 related interfaces, classes, services, tests, documentation, and supporting
 artifacts co-located at the narrowest meaningful scope.
@@ -22,6 +23,7 @@ apply DRY/YAGNI via disciplined reuse boundaries.
 ---
 
 ## When to Use
+
 - Creating or modifying any interface, class, service, or component
 - Introducing new functionality (greenfield or brownfield)
 - Reviewing boundaries, reuse decisions, or folder/namespace structure
@@ -30,6 +32,7 @@ apply DRY/YAGNI via disciplined reuse boundaries.
 ---
 
 ## Precondition Failure Signal
+
 - Related definitions dispersed across unrelated folders/namespaces
 - Tests or documentation detached from the functionality they validate
 - A slice cannot be built/tested/deployed independently
@@ -40,6 +43,7 @@ apply DRY/YAGNI via disciplined reuse boundaries.
 ---
 
 ## Postcondition Success Signal
+
 - Slice-local definitions are co-located in a common folder and namespace/module
 - Each slice contains what it needs to build/test/deploy independently
 - Shared functionality reused across multiple slices/projects lives outside slices in a dedicated library
@@ -50,6 +54,7 @@ apply DRY/YAGNI via disciplined reuse boundaries.
 ---
 
 ## Process
+
 1. **Source Review**: Inspect the current file structure and identify where related logic, tests, and documentation are located.
 2. **Implementation**: Move related files into the same directory or slice-local structure.
 3. **Verification**: Run tests for the moved components to ensure all dependencies are correctly resolved.
@@ -59,6 +64,7 @@ apply DRY/YAGNI via disciplined reuse boundaries.
 ---
 
 ## Example Test / Validation
+
 - Given a change set, identify the slice and verify code/tests/docs are co-located
 - Build and test the slice in isolation
 - Verify shared models/services are not duplicated across slices
@@ -67,6 +73,7 @@ apply DRY/YAGNI via disciplined reuse boundaries.
 ---
 
 ## Common Red Flags / Guardrail Violations
+
 - “We’ll tidy this up later”
 - Splitting related code “for reuse” without evidence
 - Duplicating shared models/services instead of extracting a library
@@ -77,6 +84,7 @@ apply DRY/YAGNI via disciplined reuse boundaries.
 ---
 
 ## Recommended Review Personas
+
 - **Tech Lead** – validates boundaries, scope discipline, and architectural intent
 - **Architecture/Domain Expert** – validates reuse decisions and cohesion
 - **Platform/DevOps Engineer** – validates independent build/test/deploy assumptions
@@ -85,12 +93,14 @@ apply DRY/YAGNI via disciplined reuse boundaries.
 ---
 
 ## Skill Priority
+
 P1 – Quality & Correctness  
 (Escalate to P0 if release traceability/immutability or deployment guarantees are compromised.)
 
 ---
 
 ## Conflict Resolution Rules
+
 - Narrowest-scope colocation overrides convenience-based grouping
 - Shared extraction requires demonstrable reuse; otherwise keep slice-local
 - External reuse ambiguity requires escalation before relocation/modification
@@ -99,6 +109,7 @@ P1 – Quality & Correctness
 ---
 
 ## Conceptual Dependencies
+
 - incremental-change-impact
 - library-extraction-stabilisation
 - ci-cd-conformance
@@ -106,11 +117,13 @@ P1 – Quality & Correctness
 ---
 
 ## Classification
+
 Core  
 Governance
 
 ---
 
 ## Notes
+
 This skill is intentionally strict. Violations often indicate systemic drift
 rather than a local choice.

@@ -8,11 +8,13 @@ description: >
 # Task Planning & Brainstorming
 
 ## Intent
+
 Ensure that tasks are well-understood, architecturally sound, and broken down into actionable, bite-sized steps before implementation begins. This minimizes rework and provides a reviewable roadmap for the team.
 
 ---
 
 ## When to Use
+
 - Before starting any new feature or component.
 - When requirements are vague or complex.
 - Before a multi-step refactoring or maintenance task.
@@ -21,6 +23,7 @@ Ensure that tasks are well-understood, architecturally sound, and broken down in
 ---
 
 ## Precondition Failure Signal
+
 - Implementation starts without a documented plan.
 - Requirements are clarified "on the fly" during coding.
 - The task is too large to track (no bite-sized steps).
@@ -29,6 +32,7 @@ Ensure that tasks are well-understood, architecturally sound, and broken down in
 ---
 
 ## Postcondition Success Signal
+
 - A validated design/plan exists in `docs/plans/YYYY-MM-DD-<name>.md`.
 - The plan includes 2-3 design alternatives with trade-offs.
 - The plan is broken into atomic tasks (2-5 minutes each).
@@ -37,6 +41,7 @@ Ensure that tasks are well-understood, architecturally sound, and broken down in
 ---
 
 ## Process
+
 1. **Source Review**: Audit current project state, relevant files, and recent commits.
 2. **Brainstorming**:
    - Ask clarifying questions one at a time.
@@ -52,6 +57,7 @@ Ensure that tasks are well-understood, architecturally sound, and broken down in
 ---
 
 ## Example Test / Validation
+
 - **Requirement**: "Add user profiles".
 - **Plan**: `docs/plans/2026-01-02-user-profiles.md`
 - **Validation**: Verify the plan contains at least 3 discrete tasks with exact file paths and failing test examples.
@@ -59,6 +65,7 @@ Ensure that tasks are well-understood, architecturally sound, and broken down in
 ---
 
 ## Common Red Flags / Guardrail Violations
+
 - Asking multiple questions at once.
 - Proposing only one design option ("Big Bang" design).
 - Tasks are too broad (e.g., "Implement the API").
@@ -67,35 +74,41 @@ Ensure that tasks are well-understood, architecturally sound, and broken down in
 ---
 
 ## Recommended Review Personas
+
 - **Tech Lead** – validates architectural intent and YAGNI.
 - **Software Engineer** – validates task granularity and technical feasibility.
 
 ---
 
 ## Skill Priority
+
 P2 – Consistency & Governance  
 (Must precede all P0-P1 implementation work.)
 
 ---
 
 ## Conflict Resolution Rules
+
 - This skill must be completed before any implementation skills are applied.
 - If requirements change during execution, return to this skill to update the plan.
 
 ---
 
 ## Conceptual Dependencies
+
 - test-driven-development (for task structure)
 - architecture-testing (for design validation)
 
 ---
 
 ## Classification
+
 Governance
 Core
 
 ---
 
 ## Notes
+
 The goal is to move the "thinking" phase out of the code and into a reviewable artifact.
 Each task in the plan should be 2-5 minutes of focused effort.

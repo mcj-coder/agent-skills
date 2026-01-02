@@ -1,0 +1,6 @@
+config:
+  - .markdownlint.json
+globs:
+  - "**/*.md"
+ignores:
+  - "node_modules/**"

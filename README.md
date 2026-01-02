@@ -6,14 +6,14 @@ consistent with **DRY** and **YAGNI**.
 
 ## Repository layout
 
-- `skills/<skill-name>/SKILL.md` — one skill per folder (kebab-case)
-- `templates/` — canonical templates for new skills and reviews
-- `docs/` — shared governance principles and standards
+- `skills/<skill-name>/SKILL.md` - one skill per folder (kebab-case)
+- `templates/` - canonical templates for new skills and reviews
+- `docs/` - shared governance principles and standards
 
 ## Skills
 
 | Skill | When to use |
-|------|-------------|
+| --- | --- |
 | `scoped-colocation` | Use this skill whenever defining, modifying, or reviewing any interface, class, service, or component to ensure all related code, tests, documentation, and dependencies are co-located at the narrowest meaningful scope, with shared functionality extracted only when reuse across multiple slices or projects is proven. |
 | `incremental-change-impact` | Use this skill whenever a change is proposed or reviewed to determine which components, slices, libraries, tests, builds, and deployments are affected, ensuring only necessary work is performed and unintended side effects are identified early. |
 | `selective-build-test` | Use this skill whenever preparing local or CI execution to build and test only the impacted components identified by change impact analysis, while preserving quality gates and correctness. |
@@ -47,9 +47,18 @@ consistent with **DRY** and **YAGNI**.
 | `contract-consistency-validation` | Use this skill whenever modifying public interfaces, APIs, or shared contracts to ensure compatibility, consistency with Semantic Versioning, and prevention of breaking changes. |
 | `modern-csharp-coding-standards` | Use this skill whenever writing or reviewing C# code to ensure use of modern language features, high performance, and robust API design. |
 
+## Development
+
+- Node.js LTS 22 (see `.nvmrc`, enforced via `package.json` engines).
+- Install dependencies: `npm install` (CI uses `npm ci`).
+- Local verification: `npm run verify` (markdownlint + cspell).
+- Pre-commit: Husky runs `lint-staged` on staged Markdown files.
+- CI: GitHub Actions runs the same `npm run verify` gate on PRs and `main`.
+- Branch protection: require the `Docs Quality` status check on `main` before merge.
+
 ## Contributing
 
 1. Create `skills/<new-skill-name>/SKILL.md` using `templates/skill_template.md`.
 2. Ensure `SKILL.md` frontmatter contains **only** `name` and `description`.
-3. Ensure the skill defines: failing precondition → applied skill → passing postcondition.
+3. Ensure the skill defines: failing precondition -> applied skill -> passing postcondition.
 4. Include red flags, review personas, priority, and conflict resolution rules.

@@ -9,12 +9,14 @@ description: >
 # Incremental Deployment Planning
 
 ## Intent
+
 Deploy only what changed (and what is impacted), while preserving strict
 traceability via immutable versions and tags.
 
 ---
 
 ## When to Use
+
 - Planning deployments in a monorepo with multiple components
 - Preparing environment promotion
 - Reviewing deployment scope for safety and efficiency
@@ -22,6 +24,7 @@ traceability via immutable versions and tags.
 ---
 
 ## Precondition Failure Signal
+
 - Broad deployments include unrelated components
 - Deployments are triggered from branches without tags
 - Environment state cannot be explained in component version terms
@@ -30,6 +33,7 @@ traceability via immutable versions and tags.
 ---
 
 ## Postcondition Success Signal
+
 - Deployment scope matches impacted components (and required dependencies)
 - Deployments reference explicit component versions/tags
 - Environment state is traceable to deployed component versions/tags
@@ -38,6 +42,7 @@ traceability via immutable versions and tags.
 ---
 
 ## Process
+
 1. **Source Review**: Inspect the impact set produced by `incremental-change-impact` and the current state of the target environment.
 2. **Implementation**: Execute the deployment only for the identified impacted components using their specific versions/tags.
 3. **Verification**: Verify that only the intended components were deployed and that their versions/tags correctly reflect the source code.
@@ -47,6 +52,7 @@ traceability via immutable versions and tags.
 ---
 
 ## Example Test / Validation
+
 - Given a change set, show only impacted components are deployed
 - Validate dependent components are included when dependency changes require it
 - Confirm environment records can list component versions/tags after deployment
@@ -54,6 +60,7 @@ traceability via immutable versions and tags.
 ---
 
 ## Common Red Flags / Guardrail Violations
+
 - “Just redeploy everything to be safe”
 - Deploying from main or HEAD without a tag
 - Allowing “implicit latest” component selection
@@ -62,6 +69,7 @@ traceability via immutable versions and tags.
 ---
 
 ## Recommended Review Personas
+
 - **Platform/DevOps Engineer** – validates deployment scope and traceability
 - **Tech Lead** – validates correctness of impacted set and risk discipline
 - **Domain Expert** – validates runtime dependency assumptions
@@ -69,12 +77,14 @@ traceability via immutable versions and tags.
 ---
 
 ## Skill Priority
+
 P1 – Quality & Correctness  
 (Escalate to P0 where traceability/immutability constraints are threatened.)
 
 ---
 
 ## Conflict Resolution Rules
+
 - Must consume incremental-change-impact and release-tagging-plan outputs
 - If uncertainty exists, broaden scope via impact justification, not via bypass of tagging/traceability
 - Overrides Delivery/Optimisation shortcuts that weaken traceability
@@ -82,16 +92,19 @@ P1 – Quality & Correctness
 ---
 
 ## Conceptual Dependencies
+
 - incremental-change-impact
 - release-tagging-plan
 
 ---
 
 ## Classification
+
 Operational  
 Governance
 
 ---
 
 ## Notes
+
 Incremental deployment is only safe when traceability is strict.

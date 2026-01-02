@@ -9,12 +9,14 @@ description: >
 # Semantic Version Impact Assessment
 
 ## Intent
+
 Derive correct semantic version changes per component/library from observed
 impact and change intent, ensuring releases are immutable and traceable.
 
 ---
 
 ## When to Use
+
 - Any time a component/library changes and may be released
 - Before tagging, releasing, or deploying
 - When reviewing change sets for release readiness
@@ -22,6 +24,7 @@ impact and change intent, ensuring releases are immutable and traceable.
 ---
 
 ## Precondition Failure Signal
+
 - Version bumps are arbitrary or inconsistent
 - Conventional commit semantics are ignored or misapplied
 - Breaking changes ship under minor/patch versions
@@ -30,6 +33,7 @@ impact and change intent, ensuring releases are immutable and traceable.
 ---
 
 ## Postcondition Success Signal
+
 - Each impacted component/library has a justified version bump
 - Unchanged components do not receive a new version
 - Version decisions align with change intent and observable impact
@@ -38,6 +42,7 @@ impact and change intent, ensuring releases are immutable and traceable.
 ---
 
 ## Process
+
 1. **Source Review**: Inspect the impact set and all commit messages since the last release for each impacted component.
 2. **Implementation**: Calculate the appropriate semantic version bump based on the nature of the changes (breaking, feature, fix).
 3. **Verification**: Verify that the calculated version correctly reflects the impact on the component's public contract.
@@ -47,6 +52,7 @@ impact and change intent, ensuring releases are immutable and traceable.
 ---
 
 ## Example Test / Validation
+
 - Given a change set, identify impacted components and derive version bumps
 - Verify breaking changes trigger major version increments
 - Verify patch/minor are used appropriately for fixes/features
@@ -55,6 +61,7 @@ impact and change intent, ensuring releases are immutable and traceable.
 ---
 
 ## Common Red Flags / Guardrail Violations
+
 - “Just bump minor to be safe”
 - Bundling multiple components into one version decision without need
 - Downgrading breaking changes to avoid major bump
@@ -63,6 +70,7 @@ impact and change intent, ensuring releases are immutable and traceable.
 ---
 
 ## Recommended Review Personas
+
 - **Tech Lead** – validates semantic correctness and consistency
 - **Release/Platform Engineer** – validates traceability and component scoping
 - **Domain Expert** – validates whether change is breaking in practice
@@ -70,11 +78,13 @@ impact and change intent, ensuring releases are immutable and traceable.
 ---
 
 ## Skill Priority
+
 P2 – Consistency & Governance
 
 ---
 
 ## Conflict Resolution Rules
+
 - Must consume incremental-change-impact output
 - Correctness of version semantics overrides convenience
 - If breaking status is ambiguous, escalate and document decision
@@ -82,14 +92,17 @@ P2 – Consistency & Governance
 ---
 
 ## Conceptual Dependencies
+
 - incremental-change-impact
 
 ---
 
 ## Classification
+
 Governance
 
 ---
 
 ## Notes
+
 Version numbers are contracts. Treat them as part of the public surface area.

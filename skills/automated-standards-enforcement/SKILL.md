@@ -9,6 +9,7 @@ description: >
 # Automated Standards Enforcement
 
 ## Intent
+
 Prefer using freely available, cross-platform, and well-supported automated
 tooling to enforce coding standards and development practices. The goal is to
 minimize reliance on subjective human/agent analysis and review, reducing
@@ -18,6 +19,7 @@ safety gates.
 ---
 
 ## When to Use
+
 - Proactively, before starting any implementation that introduces new patterns or standards.
 - Establishing new coding standards or architectural rules.
 - Reviewing existing development practices for potential automation.
@@ -28,6 +30,7 @@ safety gates.
 ---
 
 ## Precondition Failure Signal
+
 - Tooling is added as an afterthought or only when requested by a reviewer.
 - Standards are enforced primarily via "gentleman's agreements" or manual PR review.
 - Compliance is inconsistent across different developers or agents.
@@ -38,6 +41,7 @@ safety gates.
 ---
 
 ## Postcondition Success Signal
+
 - Automated tooling is configured and active *before* implementation work begins.
 - Standards are codified in configuration files for automated tools.
 - Violations are identified automatically during local development or CI execution.
@@ -48,6 +52,7 @@ safety gates.
 ---
 
 ## Process
+
 1. **Source Review & Discovery**:
     - Identify standards or rules that require enforcement.
     - Perform a **Web Search** to discover the most appropriate, cross-platform, and well-supported tools for the task.
@@ -55,20 +60,26 @@ safety gates.
 2. **User Selection**:
     - Present the discovered tool options to the user, highlighting trade-offs, licensing, and open-source alternatives.
     - Obtain explicit user approval for the selected tool before proceeding with configuration.
-3. **Implementation**:
-    - Configure and integrate the approved tools (e.g., `.editorconfig`, linters, SAST, ArchUnit.NET) into the development workflow.
+3. **Implementation & Baseline Remediation**:
+    - Configure the approved tools (e.g., `.editorconfig`, linters, SAST, ArchUnit.NET).
+    - **Crucial**: Before activating any enforcement gates (e.g., pre-commit hooks, CI blocking), perform a baseline remediation of the existing codebase to ensure it meets the new standard.
+    - If the baseline is too large for immediate remediation, define a "warn-only" period or a scoped rollout, but never activate a blocking gate on a dirty baseline without an explicit transition plan.
+4. **Gate Activation**:
+    - Once the baseline is clean or a transition plan is approved, activate the enforcement gates (hooks, CI blocking).
     - Ensure configuration is version-controlled and shared.
-4. **Verification**:
+5. **Verification**:
     - Demonstrate that the tool correctly identifies a violation of the standard and that the violation blocks the quality gate.
-5. **Documentation**:
+    - Verify that the current codebase passes the new gate without errors.
+6. **Documentation**:
     - Document the chosen tools, their configuration, and the rationale for their selection in the repo or an ADR.
     - For non-opensource tools, record the explicit user permission and the alternatives considered.
-6. **Review**:
+7. **Review**:
     - Tech Lead and Platform Engineer review the automation setup for coverage, maintenance cost, and alignment with the operating contract.
 
 ---
 
 ## Example Test / Validation
+
 - Introduce a code pattern that violates a standard and verify the automated tool fails the build/check.
 - Verify the tool runs successfully on different operating systems.
 - Confirm that the tool configuration is version-controlled and shared.
@@ -77,6 +88,8 @@ safety gates.
 ---
 
 ## Common Red Flags / Guardrail Violations
+
+- Activating enforcement gates (e.g., git hooks) on a "dirty" baseline, causing immediate workflow blockage.
 - "We'll just catch it in code review" (preferring behavior over tooling).
 - Using proprietary tools when viable open-source alternatives exist.
 - Selecting tools that only work on one operating system.
@@ -86,6 +99,7 @@ safety gates.
 ---
 
 ## Recommended Review Personas
+
 - **Platform Engineer** – validates tool selection, cross-platform support, and CI integration.
 - **Tech Lead** – validates that the automated rules accurately reflect the intended engineering standards.
 - **Security Reviewer** – validates the effectiveness and coverage of SAST and security-related tooling.
@@ -93,12 +107,14 @@ safety gates.
 ---
 
 ## Skill Priority
+
 P2 – Consistency & Governance
 (Escalate to P1 when automation is critical for correctness or P0 for security enforcement.)
 
 ---
 
 ## Conflict Resolution Rules
+
 - Automated enforcement takes precedence over manual/agent analysis.
 - If an automated tool produces excessive false positives, prioritize tuning the tool or selecting an alternative over reverting to manual review.
 - Open-source tools are preferred; if a non-opensource tool is proposed, it must be escalated for explicit user approval with a comparison to open-source alternatives.
@@ -106,6 +122,7 @@ P2 – Consistency & Governance
 ---
 
 ## Conceptual Dependencies
+
 - quality-gate-enforcement
 - local-dev-experience
 - static-analysis-security
@@ -113,10 +130,12 @@ P2 – Consistency & Governance
 ---
 
 ## Classification
+
 Core
 Governance
 
 ---
 
 ## Notes
+
 The intent is to make standards "un-ignorable" by baking them into the tooling that developers and agents use every day.

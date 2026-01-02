@@ -29,6 +29,7 @@ with the goal of portability across multiple projects and adoption by teams.
 ## Skill design contract
 
 Each skill must be:
+
 1. **TDD-driven**: define an observable failing precondition and a demonstrable passing postcondition.
 2. **Guardrail-enforced**: list red flags that indicate bypass/misapplication (e.g., skipping hooks, global suppressions).
 3. **Independently reviewable**: specify review personas and what they validate.
@@ -36,6 +37,7 @@ Each skill must be:
 5. **Conflict-aware**: declare priority and explicit conflict resolution rules.
 
 ### Skill priority model (canonical)
+
 - **P0 – Safety & Integrity**
 - **P1 – Quality & Correctness**
 - **P2 – Consistency & Governance**
@@ -43,6 +45,7 @@ Each skill must be:
 - **P4 – Optimisation & Convenience**
 
 Conflict resolution:
+
 - Higher priority wins; otherwise prefer narrower scope, then stronger guardrails; escalate if still ambiguous.
 
 ## Agent personas (recommended)
@@ -82,12 +85,12 @@ When starting a new session (human or agent), do the following:
    - Document a detailed implementation plan in `docs/plans/`.
    - **Present the plan and conflict recommendations to the user for a final decision before proceeding.**
 4. **Assess Impact**: Apply `skills/incremental-change-impact/SKILL.md` to refine the plan based on the impacted set.
-5. **Execute**: 
+5. **Execute**:
    - Apply skills according to the agreed plan.
    - **Follow the defined `Process` in each `SKILL.md`**, specifically ensuring thorough Source Review and Verification through tests.
    - For any bugs or failures encountered, apply `skills/systematic-debugging/SKILL.md`.
    - Document significant design decisions in `docs/adr/`.
-6. **Verify & Handover**: 
+6. **Verify & Handover**:
    - Apply `skills/verification-and-handover/SKILL.md` before claiming any task is complete.
    - Apply `skills/structured-review-workflow/SKILL.md` when requesting review or processing feedback.
 7. **Record**: Document any new overlaps/conflicts discovered and resolve via the priority model.
