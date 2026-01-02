@@ -17,6 +17,7 @@ must be free of warnings and errors unless explicitly approved, including
 Git and package-management warnings. Tooling configuration should be consistent
 across the toolchain, and any warnings introduced by a config change must be
 resolved before enforcement is considered complete.
+Secret scanning results are part of the quality gate and must be clean.
 
 ---
 
@@ -35,6 +36,7 @@ resolved before enforcement is considered complete.
 - Build warnings or errors occur
 - Lint/style violations exist
 - Analysis or security checks report findings
+- Secret scanning reports findings
 - Any verification step emits warnings (including non-blocking or advisory ones)
 - Git or package-manager warnings remain unresolved after a configuration change
 - Checks were bypassed or disabled for convenience
@@ -46,6 +48,7 @@ resolved before enforcement is considered complete.
 - All required checks pass
 - All verification steps are clean (zero warnings and errors, including Git and
   package-management warnings)
+- Secret scanning passes with zero findings (or explicitly approved exceptions)
 - No global suppressions were introduced without explicit approval
 - Evidence is reviewable and reproducible
 
@@ -58,8 +61,9 @@ resolved before enforcement is considered complete.
 3. **Alignment**: Confirm related tooling configuration is consistent (editor,
    formatter, VCS, package tooling). Resolve warnings introduced by the change.
 4. **Verification**: Execute the quality gates and verify that they correctly identify and block failing code.
-5. **Documentation**: Record any unavoidable suppressions or threshold changes; use an ADR for any exception and obtain explicit user permission.
-6. **Review**: Tech Lead and Security Reviewer review the enforcement status and any new suppressions.
+5. **Secrets Gate**: Ensure secret scanning runs in CI (and locally where configured) and blocks on findings.
+6. **Documentation**: Record any unavoidable suppressions or threshold changes; use an ADR for any exception and obtain explicit user permission.
+7. **Review**: Tech Lead and Security Reviewer review the enforcement status and any new suppressions.
 
 ---
 
@@ -69,6 +73,7 @@ resolved before enforcement is considered complete.
 - Verify no new suppressions or bypass configurations were introduced
 - Confirm failures are remediated rather than hidden
 - Verify no Git or package-manager warnings remain after standards changes
+- Verify secret scanning runs in CI and local workflows where configured
 
 ---
 
@@ -79,6 +84,7 @@ resolved before enforcement is considered complete.
 - Marking checks "non-blocking" to get green
 - Accepting new warnings as "known issues" without explicit user permission and ADR
 - Leaving Git or package-manager warnings unresolved after a standards change
+- Disabling or bypassing secret scanning to keep gates green
 
 ---
 

@@ -43,6 +43,7 @@ resolved immediately so enforcement can be activated without exceptions.
 - Non-opensource tools are used without explicit permission or consideration of alternatives.
 - Tool configuration is inconsistent across tools or components (conflicting rules or defaults).
 - Standards or tooling changes introduce new warnings that are left unresolved.
+- Secrets handling relies on manual discipline instead of automated scanning.
 
 ---
 
@@ -56,6 +57,7 @@ resolved immediately so enforcement can be activated without exceptions.
 - Enforcement is objective, reproducible, and documented.
 - Tool configuration is aligned across tools and components to prevent drift.
 - New or changed standards are applied with no outstanding warnings.
+- Secret scanning is enforced locally and in CI for all repositories.
 
 ---
 
@@ -70,6 +72,7 @@ resolved immediately so enforcement can be activated without exceptions.
    - Obtain explicit user approval for the selected tool before proceeding with configuration.
 3. **Implementation & Baseline Remediation**:
    - Configure the approved tools (e.g., `.editorconfig`, linters, SAST, ArchUnit.NET).
+   - Include automated secret scanning in both local hooks and CI.
    - Align related configuration across tools (e.g., editor, formatter, VCS, CI) to avoid conflicting rules.
    - **Crucial**: Before activating any enforcement gates (e.g., pre-commit hooks, CI blocking), remediate the baseline so the existing codebase meets the new standard and emits no warnings.
    - If the baseline is too large for immediate remediation, define a "warn-only" period or a scoped rollout, but never activate a blocking gate on a dirty baseline without an explicit transition plan.
@@ -93,6 +96,7 @@ resolved immediately so enforcement can be activated without exceptions.
 - Verify the tool runs successfully on different operating systems.
 - Confirm that the tool configuration is version-controlled and shared.
 - Provide evidence of open-source status or user permission for the selected tools.
+- Verify that secret scanning fails on a seeded secret and blocks the gate.
 
 ---
 
@@ -105,6 +109,7 @@ resolved immediately so enforcement can be activated without exceptions.
 - Introducing tools with poor documentation or low community support.
 - Silencing automated warnings to bypass enforcement rather than fixing the underlying issue.
 - Leaving Git or package-management warnings unresolved after a standards change.
+- Disabling or omitting secret scanning in local or CI enforcement.
 
 ---
 

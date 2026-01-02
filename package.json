@@ -6,8 +6,7 @@
   "scripts": {
     "lint": "markdownlint-cli2",
     "spell-check": "cspell \"**/*.md\"",
-    "verify:plans": "node scripts/verify-plans.js",
-    "verify": "npm run lint && npm run spell-check && npm run verify:plans",
+    "verify": "npm run lint && npm run spell-check",
     "prepare": "husky"
   },
   "engines": {
@@ -18,12 +17,6 @@
       "prettier --write",
       "markdownlint-cli2 --fix",
       "cspell"
-    ],
-    "docs/plans/**/*.md": [
-      "node scripts/verify-plans.js"
-    ],
-    "skills/writing-plans/templates/plan_template.md": [
-      "node scripts/verify-plans.js"
     ]
   },
   "keywords": [

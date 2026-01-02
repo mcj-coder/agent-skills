@@ -32,6 +32,7 @@ checks (git hooks) are efficient by only targeting staged files.
 - Git hooks run on the entire repository instead of only staged files.
 - Inconsistent local formatting or tooling behaviour across machines.
 - Hooks or local checks are unreliable or unclear.
+- No local secret scanning is enforced before commits.
 
 ---
 
@@ -44,6 +45,7 @@ checks (git hooks) are efficient by only targeting staged files.
 - Documentation explains the local workflow and expectations.
 - Local checks enforce zero warnings and errors (see `quality-gate-enforcement`).
 - Tool configuration is aligned across local and CI tools (see `automated-standards-enforcement`).
+- Secret scanning runs locally and blocks commits when findings exist.
 
 ---
 
@@ -54,6 +56,7 @@ checks (git hooks) are efficient by only targeting staged files.
    - **Efficiency**: Use tools like `lint-staged` to ensure that pre-commit hooks only run on the files being committed, preventing unnecessary whole-repo scans.
    - **Ordering**: Prefer a specialized tool if it can format; only add a general formatter (respecting `.editorconfig` or equivalent) when the specialized tool cannot, and run the specialized tool last.
    - **Consistency**: If checks depend on runtime versions, ensure repo pins are documented and align with `runtime-tooling-validation`.
+   - **Secrets**: Add local secret scanning to hooks and ensure `.env` or similar files are excluded from version control.
 3. **Verification**: Manually trigger a violation (e.g., bad formatting, lint error) in a staged file and verify that the local checks correctly identify and block it, while ignoring violations in unstaged files.
 4. **Documentation**: Update the `README.md` or dedicated development docs with instructions on how to set up and use the tools.
 5. **Review**: Tech Lead and Developer Representative review the setup for usability and effectiveness.
@@ -65,6 +68,7 @@ checks (git hooks) are efficient by only targeting staged files.
 - Introduce a known lint/style violation and confirm local checks fail
 - Confirm bypass mechanisms are not trivial or undocumented
 - Confirm local checks align with quality-gate-enforcement expectations
+- Confirm secret scanning blocks commits when seeded secrets are staged
 
 ---
 
@@ -74,6 +78,7 @@ checks (git hooks) are efficient by only targeting staged files.
 - Making checks advisory because “developers complained”
 - Divergence between local and CI expectations
 - Global suppressions introduced to reduce local noise
+- Skipping secret scanning in local hooks
 
 ---
 

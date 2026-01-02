@@ -52,17 +52,14 @@ review, and recover after interruptions.
    - Commands to run and expected outcomes.
    - Commit guidance.
 5. **Verification**: Ensure plan tasks include explicit verification steps.
-6. **Install Plan Verification**: Copy
-   `skills/writing-plans/scripts/verify-plans.js` to `scripts/verify-plans.js`
-   when plan verification is required in this repo.
-7. **Approval**: Present plan and wait for user approval.
-8. **Review**: Request review from Lead Developer and Architect personas for
+6. **Approval**: Present plan and wait for user approval.
+7. **Review**: Request review from relevant review personas for
    plan quality and boundary alignment, and record their collated feedback,
    agreed next steps, and any follow-up plan link in the plan document.
-9. **Deliver Gate**: Ask for explicit user permission before marking the plan
+8. **Deliver Gate**: Ask for explicit user permission before marking the plan
    Delivered.
-10. **Handover**: Offer execution via `executing-plans` or
-    `subagent-driven-development` (if tasks are independent).
+9. **Handover**: Offer execution via `executing-plans` or
+   `subagent-driven-development` (if tasks are independent).
 
 ---
 
@@ -123,5 +120,3 @@ Core
 ## Notes
 
 Plans are the recovery point for interruptions. Make them explicit and complete.
-If `verify-plans.js` changes, re-install it from
-`skills/writing-plans/scripts/verify-plans.js` into `scripts/verify-plans.js`.

@@ -26,7 +26,7 @@ codebase, and ensure analysis signals are treated as first-class.
 
 ## Precondition Failure Signal
 
-- Analysis reports findings (SAST/dependency/security lint)
+- Analysis reports findings (SAST/dependency/security lint/secret scans)
 - Security-related warnings are suppressed or down-ranked
 - Risky patterns are introduced without justification
 - Threat model assumptions are implicit or unclear
@@ -44,7 +44,7 @@ codebase, and ensure analysis signals are treated as first-class.
 
 ## Process
 
-1. **Source Review**: Scan the codebase and dependencies for security vulnerabilities and policy violations using static analysis tools.
+1. **Source Review**: Scan the codebase and dependencies for security vulnerabilities and policy violations using static analysis tools (including secret scanning).
 2. **Implementation**: Fix security issues or document a clear risk acceptance for false positives.
 3. **Verification**: Re-run the security scans to verify that all findings have been addressed or documented.
 4. **Documentation**: Document any risk acceptances or significant security decisions in an ADR.
@@ -66,6 +66,7 @@ codebase, and ensure analysis signals are treated as first-class.
 - Reducing severity to get green
 - Introducing dependency without understanding its security implications
 - Handling secrets in code/config without clear policy alignment
+- Disabling secret scanning to avoid findings
 
 ---
 

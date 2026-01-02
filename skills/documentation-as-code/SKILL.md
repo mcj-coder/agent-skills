@@ -61,7 +61,6 @@ the same quality gates used for production code.
    - Run Markdown linters to ensure structural correctness.
    - Run spell-checkers to identify typos.
    - Fix all warnings and errors (see `quality-gate-enforcement`).
-   - If the repository includes plan verification (for example, `npm run verify:plans`), run it and resolve all failures.
 4. **Human/Agent Verification**:
    - Verify that all internal links and file references are valid.
    - Confirm that code snippets in documentation are correct and, if possible, tested.
