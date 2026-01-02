@@ -29,6 +29,7 @@ risk, avoid fragmentation, and keep builds predictable.
 - Tooling is pinned inconsistently across components
 - Builds are unreliable across environments due to version drift
 - Upgrades are performed ad hoc without compatibility consideration
+- Package installs emit warnings or errors that are left unresolved
 
 ---
 
@@ -40,6 +41,7 @@ risk, avoid fragmentation, and keep builds predictable.
 - No unnecessary divergence is introduced
 - Tool configuration remains consistent across tools and components (see `automated-standards-enforcement`)
 - Local runtime/tooling versions are checked against repo pins, and any drift is resolved or documented
+- Package installs complete with zero warnings or errors
 
 ---
 
@@ -49,7 +51,7 @@ risk, avoid fragmentation, and keep builds predictable.
 2. **Discovery**: Confirm the latest LTS versions from authoritative sources and confirm the repo-specific target with the user.
 3. **Decision**: Record the repo-specific LTS baseline in tooling files (e.g., `.nvmrc`, `package.json` engines).
 4. **Implementation**: Upgrade or align runtimes and tools to the required versions.
-5. **Verification**: Run build and test for all components to ensure the updated tooling doesn't introduce regressions.
+5. **Verification**: Run package installs and build/test for all components to ensure the updated tooling doesn't introduce regressions or warnings.
 6. **Documentation**: Document the required runtime and tool versions in the repository's root documentation or an ADR for major upgrades.
 7. **Review**: Platform Engineer and Tech Lead review the tooling changes for consistency and stability.
 
@@ -61,6 +63,7 @@ risk, avoid fragmentation, and keep builds predictable.
 - Verify impacted components build/test under the approved versions
 - Confirm version policy is reflected consistently in component configuration
 - Record the LTS source and confirmation used for the repo decision
+- Verify package installs complete without warnings or errors
 
 ---
 
@@ -71,6 +74,7 @@ risk, avoid fragmentation, and keep builds predictable.
 - Upgrading runtimes as part of unrelated feature work without impact analysis
 - Downgrading standards to accommodate drift
 - Ignoring engine warnings or local version mismatches without a repo decision
+- Allowing package install warnings/errors to remain unresolved
 
 ---
 
