@@ -38,6 +38,15 @@ and conventions remain coherent over time.
 
 ---
 
+## Process
+1. **Source Review**: Conduct a walk-through of the repository structure to identify naming inconsistencies, boundary violations, or unnecessary duplication.
+2. **Implementation**: Reorganize files, rename directories, or extract shared code to restore the intended monorepo structure.
+3. **Verification**: Run build and test for the entire repo (or affected areas) to ensure reorganization didn't break any links or functionality.
+4. **Documentation**: Update the repository `README.md` or architectural diagrams to reflect the cleaned-up structure; use an ADR for significant structural changes.
+5. **Review**: Tech Lead and Platform Engineer review the structural changes for alignment with long-term repository goals.
+
+---
+
 ## Example Test / Validation
 - Identify inconsistencies and demonstrate a reduction in duplicated patterns
 - Verify slices remain independently buildable/testable/deployable after changes

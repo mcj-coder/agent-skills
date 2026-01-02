@@ -38,6 +38,15 @@ rather than preference or aesthetics.
 
 ---
 
+## Process
+1. **Source Review**: Conduct a codebase audit or interview stakeholders to identify areas of technical debt.
+2. **Implementation**: Classify the identified debt based on its impact on delivery, quality, and maintainability.
+3. **Verification**: Verify the prioritization against the current project roadmap and resource availability.
+4. **Documentation**: Record the technical debt inventory and prioritization; use an ADR for significant debt that will not be remediated in the short term.
+5. **Review**: Tech Lead and Platform Engineer review the technical debt assessment and remediation plan.
+
+---
+
 ## Example Test / Validation
 - Produce a debt backlog with severity, impact, and evidence
 - Identify at least one debt item with a failing signal that can be made to pass

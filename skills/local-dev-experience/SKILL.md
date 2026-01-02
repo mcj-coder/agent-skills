@@ -37,6 +37,15 @@ prevent policy violations from reaching main.
 
 ---
 
+## Process
+1. **Source Review**: Inspect the current local development setup (hooks, linters, etc.) and identify any gaps or inconsistencies.
+2. **Implementation**: Configure or update the local development tools to enforce repository standards (e.g., husky hooks, linting rules).
+3. **Verification**: Manually trigger a violation (e.g., bad formatting, lint error) and verify that the local checks correctly identify and block it.
+4. **Documentation**: Update the `README.md` or dedicated development docs with instructions on how to set up and use the tools.
+5. **Review**: Tech Lead and Developer Representative review the setup for usability and effectiveness.
+
+---
+
 ## Example Test / Validation
 - Introduce a known lint/style violation and confirm local checks fail
 - Confirm bypass mechanisms are not trivial or undocumented

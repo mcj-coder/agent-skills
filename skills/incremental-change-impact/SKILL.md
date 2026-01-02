@@ -46,6 +46,15 @@ and release decisions.
 
 ---
 
+## Process
+1. **Source Review**: Analyze the diff of the changes and identify the directly modified files and their associated components.
+2. **Implementation**: Trace dependencies from modified files to identify transitively impacted components.
+3. **Verification**: List all impacted and unimpacted components and justify why each is (or is not) affected.
+4. **Documentation**: Document the impact set for subsequent build, test, and release planning.
+5. **Review**: Tech Lead and Platform/DevOps Engineer must review the impact set for accuracy and completeness.
+
+---
+
 ## Example Test / Validation
 - Given a diff range, produce an impact list and verify only impacted components run
 - Verify unrelated components are not built/tested/deployed

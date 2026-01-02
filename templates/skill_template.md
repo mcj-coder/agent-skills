@@ -45,6 +45,18 @@ These must:
 
 ---
 
+## Process
+Define the explicit steps that must be followed to apply this skill and verify the outcome. 
+
+Steps must include:
+1. **Source Review**: Inspect relevant code, config, or documentation to understand current state and impact.
+2. **Implementation**: Apply the changes according to the skill's intent.
+3. **Verification**: Perform specific tests or checks to demonstrate the postcondition success signal.
+4. **Documentation**: Capture any required design decisions or outcomes (e.g., ADRs).
+5. **Review**: Ensure an independent review is performed by the recommended personas.
+
+---
+
 ## Example Test / Validation
 Describe one or more example validations that prove the skill was applied
 correctly.

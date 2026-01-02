@@ -37,6 +37,15 @@ risk, avoid fragmentation, and keep builds predictable.
 
 ---
 
+## Process
+1. **Source Review**: Inventory all runtimes and build tools currently used in the repository and compare them against the approved versions.
+2. **Implementation**: Upgrade or align runtimes and tools to the required versions (e.g., .NET 8, Node 20 LTS).
+3. **Verification**: Run build and test for all components to ensure the updated tooling doesn't introduce regressions.
+4. **Documentation**: Document the required runtime and tool versions in the repository's root documentation or an ADR for major upgrades.
+5. **Review**: Platform Engineer and Tech Lead review the tooling changes for consistency and stability.
+
+---
+
 ## Example Test / Validation
 - Demonstrate a failing build/check due to unsupported version, then align to pass
 - Verify impacted components build/test under the approved versions

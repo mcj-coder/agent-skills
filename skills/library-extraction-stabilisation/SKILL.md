@@ -39,6 +39,15 @@ versioning and immutability.
 
 ---
 
+## Process
+1. **Source Review**: Identify stable, reusable logic currently co-located with a consumer and verify it has multiple distinct usage points.
+2. **Implementation**: Extract the logic into a new, independent library with its own build/test/release lifecycle.
+3. **Verification**: Update consumers to use the new library and run their tests to ensure behavior is preserved.
+4. **Documentation**: Document the new library's purpose, contract, and ownership; use an ADR to record the extraction decision and justification.
+5. **Review**: Tech Lead and Platform Engineer review the extraction, versioning, and consumer integration.
+
+---
+
 ## Example Test / Validation
 - Demonstrate existing duplication or multi-consumer usage as failing state
 - After extraction, consumers depend on the library and tests pass

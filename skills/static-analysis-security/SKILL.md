@@ -38,6 +38,15 @@ codebase, and ensure analysis signals are treated as first-class.
 
 ---
 
+## Process
+1. **Source Review**: Scan the codebase and dependencies for security vulnerabilities and policy violations using static analysis tools.
+2. **Implementation**: Fix security issues or document a clear risk acceptance for false positives.
+3. **Verification**: Re-run the security scans to verify that all findings have been addressed or documented.
+4. **Documentation**: Document any risk acceptances or significant security decisions in an ADR.
+5. **Review**: Security Reviewer and Tech Lead review the scan results and remediation actions.
+
+---
+
 ## Example Test / Validation
 - Demonstrate the issue triggers a failing analysis signal, then remediate to passing
 - Verify suppressions are scoped, justified, and approved where unavoidable

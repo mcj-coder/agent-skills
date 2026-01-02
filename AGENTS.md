@@ -10,10 +10,12 @@ with the goal of portability across multiple projects and adoption by teams.
 - Work spans **greenfield and brownfield** projects; focus on establishing best practice development and guiding feature delivery.
 - Engineering standards include:
   - Automated quality checks locally (hooks), linting, code style, SAST, code analysers, security linting
+  - **Preference for automated enforcement** over manual reviewer behaviour using freely available open-source tools
   - Clean builds (**zero warnings and errors**)
   - Use latest **LTS** versions of key runtimes (e.g., .NET, Node.js, Python) with appropriate tooling
   - Default branch: `main`
   - Releases are **immutable**, **versioned**, and **tagged**
+  - **5-Tier Testing Strategy**: Implement and enforce `ArchitectureTest`, `UnitTest`, `SystemTest`, `ComponentE2E`, and `E2E` tiers according to the execution matrix.
   - Deployable components are versioned independently (semantic versioning + conventional commits)
   - During build and deployment, **only modified/impacted components** should be built/tested/deployed
   - Tags should be used in deployment records to track which component versions are deployed to environments
@@ -46,27 +48,42 @@ Conflict resolution:
 
 Agents (or humans acting in these roles) should behave as follows:
 
-- **Execution Agent**
-  - Applies a single skill to a scoped task.
-  - Must not broaden scope beyond the skill’s “When to Use” and the task statement.
+- **Software Engineer** (formerly Execution Agent)
+  - Identifies and applies all relevant skills to a scoped task.
+  - Must not broaden scope beyond the skills’ “When to Use” and the task statement.
+  - Responsible for TDD-driven implementation and adhering to DRY/YAGNI.
 
-- **Review Agent**
+- **Tech Lead / Senior Developer** (formerly Review Agent)
   - Reviews outputs independently using the skill’s review personas.
   - Must validate spirit and scope adherence, not just “green checks”.
+  - Resolves architectural conflicts and skill priority escalations.
 
-- **Change Impact Agent**
+- **Platform & DevOps Engineer** (formerly Change Impact Agent)
   - Runs `incremental-change-impact` first and produces an explicit impacted/unimpacted set.
+  - Validates build/test/deploy scope alignment and CI/CD conformance.
 
-- **Release/Traceability Agent**
+- **Release Manager / SRE** (formerly Release/Traceability Agent)
   - Ensures tag/version provenance and environment mappings are explicit and immutable.
+  - Validates release plans and rollback paths.
 
-## How to resume in a new session
+- **Security Reviewer**
+  - Validates threat/risk implications and security posture (P0 priority).
+  - Ensures compliance with static analysis and dependency safety standards.
+
+## How to resume in a new session (Planning & Execution)
 
 When starting a new session (human or agent), do the following:
 
-1. Read `README.md` to understand skill inventory.
-2. Read `docs/principles.md` for priority/conflict rules.
-3. For the current task, start with `skills/incremental-change-impact/SKILL.md`.
-4. Select the next skill(s) based on the impacted set and stated intent.
-5. Apply skills one at a time; require independent review for each skill output.
-6. Record any overlaps/conflicts discovered and resolve via the canonical priority model.
+1. **Understand Inventory**: Read `README.md` to understand the full skill library.
+2. **Review Principles**: Read `docs/principles.md` for priority/conflict rules.
+3. **Assess Impact**: For the current task, start with `skills/incremental-change-impact/SKILL.md`.
+4. **Identify Skills**: Select **all** relevant skill(s) based on the impacted set and stated intent.
+5. **Plan & Resolve**: 
+   - Identify any conflicts between selected skills.
+   - Formulate recommendations for conflict resolution using the canonical priority model.
+   - **Present the plan and conflict recommendations to the user for a final decision before proceeding.**
+6. **Execute**: 
+   - Apply skills according to the agreed plan.
+   - **Follow the defined `Process` in each `SKILL.md`**, specifically ensuring thorough Source Review and Verification through tests.
+   - Document any significant design decisions in `docs/adr/`.
+7. **Record**: Document any new overlaps/conflicts discovered and resolve via the priority model.

@@ -49,6 +49,15 @@ apply DRY/YAGNI via disciplined reuse boundaries.
 
 ---
 
+## Process
+1. **Source Review**: Inspect the current file structure and identify where related logic, tests, and documentation are located.
+2. **Implementation**: Move related files into the same directory or slice-local structure.
+3. **Verification**: Run tests for the moved components to ensure all dependencies are correctly resolved.
+4. **Documentation**: Document the component's internal structure and boundaries in its local `README.md`.
+5. **Review**: Tech Lead and Platform Engineer review the colocation and boundary decisions.
+
+---
+
 ## Example Test / Validation
 - Given a change set, identify the slice and verify code/tests/docs are co-located
 - Build and test the slice in isolation

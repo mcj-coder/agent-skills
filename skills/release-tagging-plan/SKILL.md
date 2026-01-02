@@ -37,6 +37,15 @@ to build and deploy each component version.
 
 ---
 
+## Process
+1. **Source Review**: Inspect the impact set and the current versions of all impacted components.
+2. **Implementation**: Determine the correct semantic version bump for each component and define the new tags following repository conventions.
+3. **Verification**: Verify that the proposed tags are unique and correctly map to the current source code state (commit hash).
+4. **Documentation**: Record the release tagging plan (component, version, tag, commit hash).
+5. **Review**: Release Manager/SRE and Platform Engineer review the tagging plan for accuracy and provenance.
+
+---
+
 ## Example Test / Validation
 - Given a release version, verify a unique tag points to the source used
 - Verify deployment records can map environments to component versions/tags

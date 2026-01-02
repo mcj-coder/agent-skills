@@ -37,6 +37,15 @@ tested where possible, and aligned to traceability practices.
 
 ---
 
+## Process
+1. **Source Review**: Inspect the proposed changes, deployment environment, and current telemetry/monitoring coverage.
+2. **Implementation**: Identify potential failure modes and define the corresponding rollback or remediation steps.
+3. **Verification**: Conduct a walkthrough or simulation of the rollback plan to ensure it is executable and effective.
+4. **Documentation**: Record the risk assessment and rollback plan in the change request or as an ADR for high-risk architectural changes.
+5. **Review**: Release Manager/SRE and Tech Lead must validate the feasibility and completeness of the rollback strategy.
+
+---
+
 ## Example Test / Validation
 - For a change, identify at least one failure mode and define a rollback path
 - Verify rollback candidate versions/tags can be identified from traceability records

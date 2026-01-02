@@ -37,6 +37,15 @@ versions/tags are deployed, enabling auditability and reliable rollbacks.
 
 ---
 
+## Process
+1. **Source Review**: Inspect the current environment state, deployment records, and source control tags.
+2. **Implementation**: Ensure deployment tools and records correctly capture and link component versions and tags.
+3. **Verification**: Perform an audit of an environment to prove it can be mapped back to specific source versions and tags.
+4. **Documentation**: Maintain a registry or record of environment versions; use an ADR if the traceability mechanism is changed.
+5. **Review**: Release Manager/SRE and Platform Engineer review the traceability mechanisms and records.
+
+---
+
 ## Example Test / Validation
 - For an environment, produce a component→version→tag mapping and verify it matches reality (conceptually)
 - Select a deployed version and verify the tag identifies the source state

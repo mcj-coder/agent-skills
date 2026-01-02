@@ -32,8 +32,15 @@ consistent with **DRY** and **YAGNI**.
 | `environment-traceability` | Use this skill whenever deploying or auditing environments to ensure each environment can be mapped to explicit component versions and tags, preserving immutable provenance. |
 | `ci-cd-conformance` | Use this skill when creating or changing pipelines to ensure they conform to monorepo standards: incremental execution, immutable releases, tag-based deployments, and required quality gates. |
 | `best-practice-introduction` | Use this skill when introducing new standards, tooling, or practices to plan a safe, incremental rollout that preserves delivery while strengthening governance and quality. |
+| `automated-standards-enforcement` | Use this skill whenever establishing, reviewing, or modifying engineering standards to prefer automated tooling (linters, SAST, architectural unit tests) over manual developer or agent behavior for enforcement. |
 | `technical-debt-prioritisation` | Use this skill when assessing brownfield areas to identify, classify, and prioritise technical debt in a way that supports delivery goals and reduces risk over time. |
 | `change-risk-rollback` | Use this skill whenever a change is intended for release or deployment to assess operational risk, identify failure modes, and ensure rollback paths are explicit and realistic. |
+| `test-driven-development` | Use this skill whenever implementing any feature or bugfix to ensure behaviour is defined by tests before implementation. |
+| `aspire-integration-testing` | Use this skill whenever implementing or reviewing cross-component integration tests or smoke tests for .NET Aspire applications to ensure distributed system integrity. |
+| `testcontainers-integration-tests` | Use this skill whenever implementing or reviewing integration tests that require real infrastructure (databases, queues, caches) for single-component validation. |
+| `architecture-testing` | Use this skill whenever defining or reviewing architectural boundaries, layering, or project dependency rules to ensure structural integrity and prevent drift. |
+| `contract-consistency-validation` | Use this skill whenever modifying public interfaces, APIs, or shared contracts to ensure compatibility, consistency with Semantic Versioning, and prevention of breaking changes. |
+| `modern-csharp-coding-standards` | Use this skill whenever writing or reviewing C# code to ensure use of modern language features, high performance, and robust API design. |
 
 ## Contributing
 

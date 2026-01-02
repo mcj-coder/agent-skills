@@ -38,6 +38,15 @@ traceability, incremental execution, and immutability.
 
 ---
 
+## Process
+1. **Source Review**: Audit the pipeline configuration (YAML, scripts, etc.) and compare against monorepo standards.
+2. **Implementation**: Adjust the pipeline to ensure it enforces quality gates, uses tag-based deployments, and implements incremental execution.
+3. **Verification**: Execute the pipeline and verify that it correctly handles both valid and invalid changes (e.g., fails on quality gate violations).
+4. **Documentation**: Document any exceptions or specific pipeline behaviors that differ from the standard.
+5. **Review**: Platform/DevOps Engineer and Tech Lead review the pipeline for conformance and security.
+
+---
+
 ## Example Test / Validation
 - Demonstrate a change triggers only impacted pipelines
 - Demonstrate pipeline fails on quality gate violations

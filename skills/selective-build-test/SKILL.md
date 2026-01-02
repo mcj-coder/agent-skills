@@ -38,6 +38,15 @@ correctness standards.
 
 ---
 
+## Process
+1. **Source Review**: Inspect the impact set produced by `incremental-change-impact` and determine the appropriate testing tier (UnitTest, SystemTest, ComponentE2E, E2E, ArchitectureTest) based on the current execution stage (Dev, Pre-commit, Pre-push, CI/CD).
+2. **Implementation**: Configure the build/test tool (e.g., `nx affected`, `dotnet test --filter`) to only target the identified components and tiers.
+3. **Verification**: Execute the build/test and verify that only the intended components and tiers were processed and that they passed.
+4. **Documentation**: Document the selective execution plan, including which tiers were run and why.
+5. **Review**: Platform/DevOps Engineer and Tech Lead review the selective execution results for correctness, coverage, and alignment with the test execution matrix.
+
+---
+
 ## Example Test / Validation
 - Change a single component and verify only that component’s build/tests run
 - Introduce a dependency change and verify dependent components are included
@@ -85,4 +94,4 @@ Operational
 ---
 
 ## Notes
-Optimise feedback loops, not standards. Faster is acceptable only when correct.
+Optimise feedback loops, not standards. Faster is acceptable only when correct. Refer to the repository's "Test Execution Matrix" for stage-specific tier requirements.

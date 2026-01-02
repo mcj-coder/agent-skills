@@ -37,6 +37,15 @@ stable foundations: structure, standards, quality gates, and traceability.
 
 ---
 
+## Process
+1. **Source Review**: Review the component requirements and monorepo standards to ensure the new component is correctly placed and named.
+2. **Implementation**: Scaffold the new component using standard templates, including boilerplate for tests and CI/CD.
+3. **Verification**: Execute the local quality gates (hooks, linting, tests) to ensure the baseline is clean and passing.
+4. **Documentation**: Document the new component's purpose and initial architecture in its `README.md` and an ADR if it's a significant new service.
+5. **Review**: Tech Lead and Platform Engineer review the new component for conformance and architectural alignment.
+
+---
+
 ## Example Test / Validation
 - New component can be built/tested in isolation
 - Quality checks run and are configured to fail on violations

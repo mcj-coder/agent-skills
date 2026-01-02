@@ -37,6 +37,15 @@ impact and change intent, ensuring releases are immutable and traceable.
 
 ---
 
+## Process
+1. **Source Review**: Inspect the impact set and all commit messages since the last release for each impacted component.
+2. **Implementation**: Calculate the appropriate semantic version bump based on the nature of the changes (breaking, feature, fix).
+3. **Verification**: Verify that the calculated version correctly reflects the impact on the component's public contract.
+4. **Documentation**: Document the proposed version bumps and the rationale for each.
+5. **Review**: Tech Lead and Platform Engineer review the version bump calculations.
+
+---
+
 ## Example Test / Validation
 - Given a change set, identify impacted components and derive version bumps
 - Verify breaking changes trigger major version increments

@@ -38,6 +38,15 @@ avoiding premature abstraction and accidental coupling.
 
 ---
 
+## Process
+1. **Source Review**: Inspect the current code location, its callers, and potential future reuse points.
+2. **Implementation**: Move or refactor code to the appropriate boundary (slice-local or shared).
+3. **Verification**: Run build and test for the affected and related components to ensure no boundary violations or unintended coupling.
+4. **Documentation**: Record the reasoning for placement in an ADR if it defines or changes architectural boundaries.
+5. **Review**: Tech Lead and Architecture/Domain Expert review the placement and ownership decision.
+
+---
+
 ## Example Test / Validation
 - Demonstrate reuse evidence (multiple consumers) before extracting
 - Verify moving code does not introduce cross-slice coupling

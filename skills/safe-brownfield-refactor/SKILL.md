@@ -37,6 +37,15 @@ contracts, or operational characteristics.
 
 ---
 
+## Process
+1. **Source Review**: Thoroughly understand the existing behavior, identifying the core logic and its side effects.
+2. **Implementation**: Apply incremental changes to improve code quality, following DRY and YAGNI.
+3. **Verification**: Execute the existing test suite and any new tests created to verify that behavior is preserved.
+4. **Documentation**: Document the refactoring intent and any significant changes in the PR or an ADR if it involves structural patterns.
+5. **Review**: Tech Lead and Domain Expert review the refactored code for correctness and adherence to standards.
+
+---
+
 ## Example Test / Validation
 - Introduce or identify a failing test that captures expected behaviour, then refactor to passing
 - Run regression tests relevant to impacted components

@@ -37,6 +37,15 @@ destabilising delivery, while preserving enforceable standards.
 
 ---
 
+## Process
+1. **Source Review**: Audit existing practices and identify gaps or inconsistencies that the new practice addresses.
+2. **Implementation**: Draft the incremental adoption plan and define measurable checkpoints.
+3. **Verification**: Validate the plan against the "Postcondition Success Signal" and ensure it does not block delivery.
+4. **Documentation**: Document the new practice, the rollout plan, and any time-bounded exceptions in the repo or an ADR if it's a major architectural shift.
+5. **Review**: Tech Lead and Platform Engineer review the rollout plan for feasibility and alignment.
+
+---
+
 ## Example Test / Validation
 - Demonstrate an initial failing signal (policy gap) and a phased path to passing
 - Validate that early phases do not block delivery while still enforcing progress

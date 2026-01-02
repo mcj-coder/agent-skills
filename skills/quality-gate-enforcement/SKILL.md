@@ -38,6 +38,15 @@ analysis) without bypasses, suppressions, or silent degradations.
 
 ---
 
+## Process
+1. **Source Review**: Inspect the current quality gate configuration and identify any active suppressions or bypassed checks.
+2. **Implementation**: Fix violations or re-enable checks to ensure the quality gates are fully enforced.
+3. **Verification**: Execute the quality gates and verify that they correctly identify and block failing code.
+4. **Documentation**: Record any unavoidable suppressions or threshold changes; use an ADR if changing the overall quality policy.
+5. **Review**: Tech Lead and Security Reviewer review the enforcement status and any new suppressions.
+
+---
+
 ## Example Test / Validation
 - Run the required quality suite for impacted components and confirm pass
 - Verify no new suppressions or bypass configurations were introduced

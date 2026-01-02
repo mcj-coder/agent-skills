@@ -37,6 +37,15 @@ traceability via immutable versions and tags.
 
 ---
 
+## Process
+1. **Source Review**: Inspect the impact set produced by `incremental-change-impact` and the current state of the target environment.
+2. **Implementation**: Execute the deployment only for the identified impacted components using their specific versions/tags.
+3. **Verification**: Verify that only the intended components were deployed and that their versions/tags correctly reflect the source code.
+4. **Documentation**: Update the environment traceability records with the new deployment details.
+5. **Review**: Release Manager/SRE and Platform Engineer review the deployment plan and execution results.
+
+---
+
 ## Example Test / Validation
 - Given a change set, show only impacted components are deployed
 - Validate dependent components are included when dependency changes require it
