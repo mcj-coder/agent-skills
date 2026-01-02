@@ -18,6 +18,7 @@ safety gates.
 ---
 
 ## When to Use
+- Proactively, before starting any implementation that introduces new patterns or standards.
 - Establishing new coding standards or architectural rules.
 - Reviewing existing development practices for potential automation.
 - Configuring quality gates for CI/CD or local development.
@@ -27,6 +28,7 @@ safety gates.
 ---
 
 ## Precondition Failure Signal
+- Tooling is added as an afterthought or only when requested by a reviewer.
 - Standards are enforced primarily via "gentleman's agreements" or manual PR review.
 - Compliance is inconsistent across different developers or agents.
 - Quality gates rely on qualitative statements (e.g., "LGTM") rather than quantitative signals.
@@ -36,6 +38,7 @@ safety gates.
 ---
 
 ## Postcondition Success Signal
+- Automated tooling is configured and active *before* implementation work begins.
 - Standards are codified in configuration files for automated tools.
 - Violations are identified automatically during local development or CI execution.
 - Tooling is cross-platform (e.g., works on Windows, Linux, macOS).
@@ -45,11 +48,23 @@ safety gates.
 ---
 
 ## Process
-1. **Source Review**: Audit current standards and identify rules that are currently enforced manually. Search for existing open-source tools that can automate these checks.
-2. **Implementation**: Configure and integrate selected tools (e.g., `.editorconfig`, linters, SAST, ArchUnit.NET) into the development workflow.
-3. **Verification**: Demonstrate that the tool correctly identifies a violation of the standard and that the violation blocks the quality gate.
-4. **Documentation**: Document the chosen tools, their configuration, and the rationale for their selection (including open-source status) in the repo or an ADR. If non-opensource tools are used, record explicit user permission and the alternatives considered.
-5. **Review**: Tech Lead and Platform Engineer review the automation setup for coverage, maintenance cost, and alignment with the operating contract.
+1. **Source Review & Discovery**:
+    - Identify standards or rules that require enforcement.
+    - Perform a **Web Search** to discover the most appropriate, cross-platform, and well-supported tools for the task.
+    - Prioritize open-source tools with active community support.
+2. **User Selection**:
+    - Present the discovered tool options to the user, highlighting trade-offs, licensing, and open-source alternatives.
+    - Obtain explicit user approval for the selected tool before proceeding with configuration.
+3. **Implementation**:
+    - Configure and integrate the approved tools (e.g., `.editorconfig`, linters, SAST, ArchUnit.NET) into the development workflow.
+    - Ensure configuration is version-controlled and shared.
+4. **Verification**:
+    - Demonstrate that the tool correctly identifies a violation of the standard and that the violation blocks the quality gate.
+5. **Documentation**:
+    - Document the chosen tools, their configuration, and the rationale for their selection in the repo or an ADR.
+    - For non-opensource tools, record the explicit user permission and the alternatives considered.
+6. **Review**:
+    - Tech Lead and Platform Engineer review the automation setup for coverage, maintenance cost, and alignment with the operating contract.
 
 ---
 
