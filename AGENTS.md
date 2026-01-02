@@ -81,7 +81,7 @@ When starting a new session (human or agent), do the following:
 1. **Bootstrap Skills**: Apply `skills/using-skill-library/SKILL.md`.
    - Load the Skills table from `README.md`.
    - Read `docs/principles.md` for priority/conflict rules.
-2. **Brainstorm**: Apply `skills/brainstorming/SKILL.md` (or the wrapper `skills/task-planning-and-brainstorming/SKILL.md` if both steps are needed).
+2. **Brainstorm**: Apply `skills/brainstorming/SKILL.md`.
    - Explore requirements and design alternatives.
    - Capture a validated design before planning.
 3. **Plan**: Apply `skills/writing-plans/SKILL.md`.

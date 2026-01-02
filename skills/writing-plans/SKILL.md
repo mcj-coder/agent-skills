@@ -94,7 +94,7 @@ P2 - Consistency & Governance
 ## Conceptual Dependencies
 
 - test-driven-development
-- task-planning-and-brainstorming
+- brainstorming
 
 ---
 

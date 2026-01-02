@@ -58,16 +58,16 @@ the same quality gates used for production code.
 2. **Implementation**: Draft or update the documentation following the repository's templates and style guides.
    - Confirm the documentation/comment language with the user and configure CSpell language settings accordingly.
 3. **Automated Verification**:
-    - Run Markdown linters to ensure structural correctness.
-    - Run spell-checkers to identify typos.
-    - Fix all warnings and errors (see `quality-gate-enforcement`).
-    - If the repository includes plan verification (for example, `npm run verify:plans`), run it and resolve all failures.
+   - Run Markdown linters to ensure structural correctness.
+   - Run spell-checkers to identify typos.
+   - Fix all warnings and errors (see `quality-gate-enforcement`).
+   - If the repository includes plan verification (for example, `npm run verify:plans`), run it and resolve all failures.
 4. **Human/Agent Verification**:
-    - Verify that all internal links and file references are valid.
-    - Confirm that code snippets in documentation are correct and, if possible, tested.
+   - Verify that all internal links and file references are valid.
+   - Confirm that code snippets in documentation are correct and, if possible, tested.
 5. **Review**:
-    - Use sub-agent calls or peer review to request validation from applicable personas (e.g., Tech Lead for ADRs).
-    - Incorporate feedback and re-verify.
+   - Use sub-agent calls or peer review to request validation from applicable personas (e.g., Tech Lead for ADRs).
+   - Incorporate feedback and re-verify.
 
 ---
 
@@ -116,7 +116,7 @@ P2 – Consistency & Governance
 
 - automated-standards-enforcement
 - verification-and-handover
-- task-planning-and-brainstorming
+- writing-plans
 
 ---
 

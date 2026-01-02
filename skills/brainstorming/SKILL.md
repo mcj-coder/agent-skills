@@ -93,7 +93,7 @@ P2 - Consistency & Governance
 
 ## Conceptual Dependencies
 
-- task-planning-and-brainstorming (for plan integration)
+- writing-plans (for plan integration)
 
 ---
 

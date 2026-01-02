@@ -51,8 +51,11 @@ New skills to add:
 
 Existing skills to refactor:
 
-- `task-planning-and-brainstorming` (becomes wrapper or deprecates in favour of `brainstorming` + `writing-plans`).
 - `structured-review-workflow` (becomes wrapper referencing `requesting-code-review` + `receiving-code-review`).
+
+Skills to remove:
+
+- `task-planning-and-brainstorming` (replaced by `brainstorming` + `writing-plans`).
 
 Conflict and priority notes:
 
@@ -66,7 +69,7 @@ Conflict and priority notes:
 | --- | ---------------------------------------------------------------------------------------------------------------------------- | ------ | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------- |
 | 1   | Define target skill set and mapping (new + split) and review for conflicts/priority.                                         | Done   | Target set and conflict notes documented.        | Target Skill Set section in this plan.                                                                                    |
 | 2   | Create new workflow skills: `brainstorming`, `writing-plans`, `executing-plans`.                                             | Done   | New skill files created.                         | skills/brainstorming/SKILL.md; skills/writing-plans/SKILL.md; skills/executing-plans/SKILL.md                             |
-| 2a  | Refactor `task-planning-and-brainstorming` as a wrapper.                                                                     | Done   | Wrapper updated to reference new skills.         | skills/task-planning-and-brainstorming/SKILL.md                                                                           |
+| 2a  | Remove `task-planning-and-brainstorming` (replaced by `brainstorming` + `writing-plans`).                                    | Done   | Skill removed and references updated.            | skills/task-planning-and-brainstorming removed; docs updated.                                                             |
 | 3   | Create execution orchestration skills: `subagent-driven-development`, `dispatching-parallel-agents`.                         | Done   | New skill files created.                         | skills/subagent-driven-development/SKILL.md; skills/dispatching-parallel-agents/SKILL.md                                  |
 | 4   | Create workspace and closure skills: `using-git-worktrees`, `finishing-a-development-branch`.                                | Done   | New skill files created.                         | skills/using-git-worktrees/SKILL.md; skills/finishing-a-development-branch/SKILL.md                                       |
 | 5   | Split review workflow: add `requesting-code-review` + `receiving-code-review`; keep `structured-review-workflow` as wrapper. | Done   | New skills added and wrapper updated.            | skills/requesting-code-review/SKILL.md; skills/receiving-code-review/SKILL.md; skills/structured-review-workflow/SKILL.md |
@@ -86,6 +89,7 @@ Notes:
 - 2026-01-02: Created new workflow, orchestration, workspace, review, bootstrap, and skill-authoring skills; wrappers updated in progress.
 - 2026-01-02: Target skill set and conflict notes documented; execution started.
 - 2026-01-02: README and AGENTS workflow updated to reference new skills.
+- 2026-01-02: Removed task-planning-and-brainstorming and updated references.
 
 ## Finalization
 

@@ -97,7 +97,7 @@ P1 – Quality & Correctness
 ## Conceptual Dependencies
 
 - quality-gate-enforcement
-- task-planning-and-brainstorming (for checklist validation)
+- writing-plans (for checklist validation)
 
 ---
 

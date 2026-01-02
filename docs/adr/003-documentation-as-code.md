@@ -33,4 +33,4 @@ We will implement a "Documentation as Code" (DaC) approach. This means:
 - `documentation-as-code` (Primary)
 - `automated-standards-enforcement`
 - `verification-and-handover`
-- `task-planning-and-brainstorming`
+- `writing-plans`

@@ -10,7 +10,7 @@ The repository prioritizes automated standards enforcement over manual behavior 
 
 ## Decision
 
-We will update the `automated-standards-enforcement` skill to mandate proactive tooling setup *before* implementation work begins. This includes:
+We will update the `automated-standards-enforcement` skill to mandate proactive tooling setup _before_ implementation work begins. This includes:
 
 1. **Mandatory Discovery**: Using web searches to identify the most appropriate, cross-platform, and well-supported tools.
 2. **User-Driven Selection**: Presenting discovered options (including open-source alternatives) to the user for explicit approval before configuration.
@@ -18,8 +18,8 @@ We will update the `automated-standards-enforcement` skill to mandate proactive 
 
 ## Alternatives Considered
 
-- **Reactive Setup**: Adding tools only when manual reviews identify recurring issues. *Rejected because it allows low-quality code to enter the repository and increases the cost of remediation.*
-- **Implicit Tooling**: Assuming the agent knows the "best" tool without discovery or user consultation. *Rejected to prevent bias and ensure the user's environment and preference are respected.*
+- **Reactive Setup**: Adding tools only when manual reviews identify recurring issues. _Rejected because it allows low-quality code to enter the repository and increases the cost of remediation._
+- **Implicit Tooling**: Assuming the agent knows the "best" tool without discovery or user consultation. _Rejected to prevent bias and ensure the user's environment and preference are respected._
 
 ## Consequences
 
@@ -30,5 +30,5 @@ We will update the `automated-standards-enforcement` skill to mandate proactive 
 ## Skill References
 
 - `automated-standards-enforcement`
-- `task-planning-and-brainstorming`
+- `writing-plans`
 - `documentation-as-code`

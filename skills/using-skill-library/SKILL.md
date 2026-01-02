@@ -43,7 +43,7 @@ and workflow discipline.
 2. **Principles**: Read `docs/principles.md` for priority and conflicts.
 3. **Trigger Check**: Match the task to relevant skills.
 4. **Announce**: State which skills apply and why.
-5. **Plan**: Use `task-planning-and-brainstorming` for multi-step work.
+5. **Plan**: Use `brainstorming` then `writing-plans` for multi-step work.
 
 ---
 
@@ -82,7 +82,8 @@ P2 - Consistency & Governance
 
 ## Conceptual Dependencies
 
-- task-planning-and-brainstorming
+- brainstorming
+- writing-plans
 - documentation-as-code
 
 ---

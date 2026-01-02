@@ -41,7 +41,7 @@ pre/post conditions, guardrails, and verification.
 
 ## Process
 
-1. **Plan**: Use `task-planning-and-brainstorming` if the change is multi-step.
+1. **Plan**: Use `brainstorming` then `writing-plans` if the change is multi-step.
 2. **Template**: Start from `templates/skill_template.md`.
 3. **Define Tests**: Write precondition and postcondition first.
 4. **Guardrails**: Add red flags and conflict resolution rules.
