@@ -13,7 +13,10 @@ description: >
 Ensure changes meet required quality standards (clean builds, lint/style,
 analysis) without bypasses, suppressions, or silent degradations.
 All verification outputs (builds, tests, linters, analyzers, security checks)
-must be free of warnings and errors unless explicitly approved.
+must be free of warnings and errors unless explicitly approved, including
+Git and package-management warnings. Tooling configuration should be consistent
+across the toolchain, and any warnings introduced by a config change must be
+resolved before enforcement is considered complete.
 
 ---
 
@@ -23,6 +26,7 @@ must be free of warnings and errors unless explicitly approved.
 - Before tagging or releasing any component
 - Before deploying to any environment
 - When introducing or modifying quality checks
+- When standard/tooling configuration changes introduce new warnings
 
 ---
 
@@ -32,6 +36,7 @@ must be free of warnings and errors unless explicitly approved.
 - Lint/style violations exist
 - Analysis or security checks report findings
 - Any verification step emits warnings (including non-blocking or advisory ones)
+- Git or package-manager warnings remain unresolved after a configuration change
 - Checks were bypassed or disabled for convenience
 
 ---
@@ -39,7 +44,8 @@ must be free of warnings and errors unless explicitly approved.
 ## Postcondition Success Signal
 
 - All required checks pass
-- All verification steps are clean (zero warnings and errors)
+- All verification steps are clean (zero warnings and errors, including Git and
+  package-management warnings)
 - No global suppressions were introduced without explicit approval
 - Evidence is reviewable and reproducible
 
@@ -49,9 +55,11 @@ must be free of warnings and errors unless explicitly approved.
 
 1. **Source Review**: Inspect the current quality gate configuration and identify any active suppressions or bypassed checks.
 2. **Implementation**: Fix violations or re-enable checks to ensure the quality gates are fully enforced.
-3. **Verification**: Execute the quality gates and verify that they correctly identify and block failing code.
-4. **Documentation**: Record any unavoidable suppressions or threshold changes; use an ADR for any exception and obtain explicit user permission.
-5. **Review**: Tech Lead and Security Reviewer review the enforcement status and any new suppressions.
+3. **Alignment**: Confirm related tooling configuration is consistent (editor,
+   formatter, VCS, package tooling). Resolve warnings introduced by the change.
+4. **Verification**: Execute the quality gates and verify that they correctly identify and block failing code.
+5. **Documentation**: Record any unavoidable suppressions or threshold changes; use an ADR for any exception and obtain explicit user permission.
+6. **Review**: Tech Lead and Security Reviewer review the enforcement status and any new suppressions.
 
 ---
 
@@ -60,6 +68,7 @@ must be free of warnings and errors unless explicitly approved.
 - Run the required quality suite for impacted components and confirm pass
 - Verify no new suppressions or bypass configurations were introduced
 - Confirm failures are remediated rather than hidden
+- Verify no Git or package-manager warnings remain after standards changes
 
 ---
 
@@ -69,6 +78,7 @@ must be free of warnings and errors unless explicitly approved.
 - Globally disabling lint rules or warnings
 - Marking checks "non-blocking" to get green
 - Accepting new warnings as "known issues" without explicit user permission and ADR
+- Leaving Git or package-manager warnings unresolved after a standards change
 
 ---
 

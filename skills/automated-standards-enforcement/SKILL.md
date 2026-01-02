@@ -17,6 +17,8 @@ hallucinations and ensuring consistent, objective enforcement of quality and
 safety gates.
 Tool configuration must be consistent across tools and components to avoid
 conflicting rules or drift (e.g., aligning editor, formatter, and VCS settings).
+When standards change, any resulting warnings or inconsistencies must be
+resolved immediately so enforcement can be activated without exceptions.
 
 ---
 
@@ -40,46 +42,48 @@ conflicting rules or drift (e.g., aligning editor, formatter, and VCS settings).
 - Tooling is non-existent, platform-specific, or poorly documented.
 - Non-opensource tools are used without explicit permission or consideration of alternatives.
 - Tool configuration is inconsistent across tools or components (conflicting rules or defaults).
+- Standards or tooling changes introduce new warnings that are left unresolved.
 
 ---
 
 ## Postcondition Success Signal
 
-- Automated tooling is configured and active *before* implementation work begins.
+- Automated tooling is configured and active _before_ implementation work begins.
 - Standards are codified in configuration files for automated tools.
 - Violations are identified automatically during local development or CI execution.
 - Tooling is cross-platform (e.g., works on Windows, Linux, macOS).
 - Open-source tools are used by default; non-opensource tools have documented user permission and identified alternatives.
 - Enforcement is objective, reproducible, and documented.
 - Tool configuration is aligned across tools and components to prevent drift.
+- New or changed standards are applied with no outstanding warnings.
 
 ---
 
 ## Process
 
 1. **Source Review & Discovery**:
-    - Identify standards or rules that require enforcement.
-    - Perform a **Web Search** to discover the most appropriate, cross-platform, and well-supported tools for the task.
-    - Prioritize open-source tools with active community support.
+   - Identify standards or rules that require enforcement.
+   - Perform a **Web Search** to discover the most appropriate, cross-platform, and well-supported tools for the task.
+   - Prioritize open-source tools with active community support.
 2. **User Selection**:
-    - Present the discovered tool options to the user, highlighting trade-offs, licensing, and open-source alternatives.
-    - Obtain explicit user approval for the selected tool before proceeding with configuration.
+   - Present the discovered tool options to the user, highlighting trade-offs, licensing, and open-source alternatives.
+   - Obtain explicit user approval for the selected tool before proceeding with configuration.
 3. **Implementation & Baseline Remediation**:
-    - Configure the approved tools (e.g., `.editorconfig`, linters, SAST, ArchUnit.NET).
-    - Align related configuration across tools (e.g., editor, formatter, VCS, CI) to avoid conflicting rules.
-    - **Crucial**: Before activating any enforcement gates (e.g., pre-commit hooks, CI blocking), perform a baseline remediation of the existing codebase to ensure it meets the new standard.
-    - If the baseline is too large for immediate remediation, define a "warn-only" period or a scoped rollout, but never activate a blocking gate on a dirty baseline without an explicit transition plan.
+   - Configure the approved tools (e.g., `.editorconfig`, linters, SAST, ArchUnit.NET).
+   - Align related configuration across tools (e.g., editor, formatter, VCS, CI) to avoid conflicting rules.
+   - **Crucial**: Before activating any enforcement gates (e.g., pre-commit hooks, CI blocking), remediate the baseline so the existing codebase meets the new standard and emits no warnings.
+   - If the baseline is too large for immediate remediation, define a "warn-only" period or a scoped rollout, but never activate a blocking gate on a dirty baseline without an explicit transition plan.
 4. **Gate Activation**:
-    - Once the baseline is clean or a transition plan is approved, activate the enforcement gates (hooks, CI blocking).
-    - Ensure configuration is version-controlled and shared.
+   - Once the baseline is clean or a transition plan is approved, activate the enforcement gates (hooks, CI blocking).
+   - Ensure configuration is version-controlled and shared.
 5. **Verification**:
-    - Demonstrate that the tool correctly identifies a violation of the standard and that the violation blocks the quality gate.
-    - Verify that the current codebase passes the new gate without errors.
+   - Demonstrate that the tool correctly identifies a violation of the standard and that the violation blocks the quality gate.
+   - Verify that the current codebase passes the new gate without errors.
 6. **Documentation**:
-    - Document the chosen tools, their configuration, and the rationale for their selection in the repo or an ADR.
-    - For non-opensource tools, record the explicit user permission and the alternatives considered.
+   - Document the chosen tools, their configuration, and the rationale for their selection in the repo or an ADR.
+   - For non-opensource tools, record the explicit user permission and the alternatives considered.
 7. **Review**:
-    - Tech Lead and Platform Engineer review the automation setup for coverage, maintenance cost, and alignment with the operating contract.
+   - Tech Lead and Platform Engineer review the automation setup for coverage, maintenance cost, and alignment with the operating contract.
 
 ---
 
@@ -100,6 +104,7 @@ conflicting rules or drift (e.g., aligning editor, formatter, and VCS settings).
 - Selecting tools that only work on one operating system.
 - Introducing tools with poor documentation or low community support.
 - Silencing automated warnings to bypass enforcement rather than fixing the underlying issue.
+- Leaving Git or package-management warnings unresolved after a standards change.
 
 ---
 
