@@ -19,6 +19,7 @@ Ensure that all completed work is objectively verified through evidence before a
 - Before claiming a bug is fixed or a requirement is met.
 - Before moving to the next task in a plan.
 - Whenever about to express "satisfaction" with the current state.
+- Before marking any plan task or deliverable as complete (status changes count as claims).
 
 ---
 
@@ -26,8 +27,9 @@ Ensure that all completed work is objectively verified through evidence before a
 
 - "Should work now" or "Seems fixed" (claims without evidence).
 - Committing without running the full test suite for impacted components.
-- Linter or build errors discovered *after* claiming completion.
+- Linter or build errors discovered _after_ claiming completion.
 - Requirements checklist is missing or incomplete.
+- Plan/task status marked "Done/Delivered" before evidence is recorded.
 
 ---
 
@@ -37,6 +39,7 @@ Ensure that all completed work is objectively verified through evidence before a
 - Every claim is accompanied by fresh, specific verification output (e.g., test results, build logs).
 - A final line-by-line requirements check has been performed.
 - Compilation and quality gates (LTS, zero warnings) are verified green (see `quality-gate-enforcement`).
+- Plan/task status is only updated to complete after evidence is documented (no retroactive proof).
 
 ---
 
@@ -46,8 +49,9 @@ Ensure that all completed work is objectively verified through evidence before a
 2. **Execute**: Run the FULL command (fresh, complete). Do not rely on previous runs or partial checks.
 3. **Analyze**: Read the full output. Check exit codes and failure counts.
 4. **Verify**: Does the output explicitly confirm the claim?
-5. **Document**: State the claim WITH the supporting evidence (or a reference to it).
-6. **Handover**: For final completion, perform a "VCS check" (diff review) to ensure no unintended changes or debug code are included.
+5. **Document**: Record evidence first, then state the claim WITH the supporting evidence (or a reference to it).
+6. **Update Status**: Only after Step 5, update any plan/task status to Done/Delivered and include the evidence reference.
+7. **Handover**: For final completion, perform a "VCS check" (diff review) to ensure no unintended changes or debug code are included.
 
 ---
 
@@ -66,6 +70,7 @@ Ensure that all completed work is objectively verified through evidence before a
 - Trusting "Agent success" reports without checking the VCS diff.
 - Relying on partial verification (e.g., "Linter passed, so build will pass").
 - Skipping verification because of "time pressure" or exhaustion.
+- Updating plan/task status before evidence is written down.
 
 ---
 
