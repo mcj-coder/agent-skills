@@ -1,0 +1,20 @@
+﻿{
+  "name": "agent-skills-library",
+  "version": "1.0.0",
+  "description": "A codified skill library for mixed human/agent teams",
+  "main": "index.js",
+  "scripts": {
+    "lint": "markdownlint **/*.md",
+    "spell-check": "cspell \"**/*.md\"",
+    "verify": "npm run lint && npm run spell-check"
+  },
+  "keywords": [
+    "agents",
+    "skills",
+    "monorepo",
+    "governance"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {}
+}
