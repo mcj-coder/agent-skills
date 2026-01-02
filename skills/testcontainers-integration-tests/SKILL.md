@@ -55,6 +55,15 @@ Ensure that a component's interaction with its immediate infrastructure (Postgre
 
 ---
 
+## Key Practices
+
+- Use wait strategies and random port binding for reliable startup.
+- Manage container lifecycle with `IAsyncLifetime` and clean teardown.
+- Reuse containers only when it reduces runtime without compromising isolation.
+- Run migrations in fixture setup and keep seed data minimal.
+
+---
+
 ## Example Test / Validation
 
 - **Pattern**: PostgreSQL Repository Test.
@@ -111,3 +120,4 @@ Operational
 ## Notes
 
 Testcontainers ensures "ComponentE2E" tests remain co-located with the component code and run reliably in any Docker-enabled environment.
+See `skills/testcontainers-integration-tests/references/reference.md` for examples and CI notes.

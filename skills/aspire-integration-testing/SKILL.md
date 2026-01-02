@@ -54,6 +54,15 @@ Ensure that distributed components in an Aspire application interact correctly u
 
 ---
 
+## Key Practices
+
+- Use dynamic endpoint discovery instead of hard-coded URLs.
+- Prefer health check polling over fixed delays.
+- Use shared fixtures and collections to avoid multiple AppHost instances.
+- Keep UI tests separate and only use Playwright when required.
+
+---
+
 ## Example Test / Validation
 
 - **Pattern**: Basic Service Call.
@@ -110,3 +119,4 @@ Operational
 ## Notes
 
 Always wait for health checks. Aspire makes it easy to use real SQL, Redis, etc., so avoid mocking them in this tier.
+See `skills/aspire-integration-testing/references/reference.md` for examples and CI/debugging notes.

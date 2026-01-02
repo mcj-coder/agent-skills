@@ -58,6 +58,15 @@ Enforce the use of modern C# (12+) features to improve code safety, readability,
 
 ---
 
+## Key Practices
+
+- Use `record` and `readonly record struct` for immutable domain modeling.
+- Prefer pattern matching over nested `if`/`else` branches.
+- Pass `CancellationToken` through async call chains.
+- Use `Span<T>` and `Memory<T>` for high-performance parsing and buffers.
+
+---
+
 ## Example Test / Validation
 
 - **Refactor**: Convert a mutable DTO class to a positional `record`.
@@ -112,4 +121,4 @@ Core
 
 ## Notes
 
-Refer to the comprehensive `modern-csharp-coding-standards` reference for detailed implementation patterns (Records, Span, Pattern Matching, etc.).
+See `skills/modern-csharp-coding-standards/references/reference.md` for focused examples and patterns.
