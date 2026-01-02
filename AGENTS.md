@@ -79,7 +79,7 @@ Agents (or humans acting in these roles) should behave as follows:
 When starting a new session (human or agent), do the following:
 
 1. **Bootstrap Skills**: Apply `skills/using-skill-library/SKILL.md`.
-   - Load the Skills table from `README.md`.
+   - Load skill name + description from each skill's front matter in `skills/**/SKILL.md`.
    - Read `docs/principles.md` for priority/conflict rules.
 2. **Brainstorm**: Apply `skills/brainstorming/SKILL.md`.
    - Explore requirements and design alternatives.

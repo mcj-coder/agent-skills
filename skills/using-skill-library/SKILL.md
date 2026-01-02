@@ -31,7 +31,7 @@ and workflow discipline.
 
 ## Postcondition Success Signal
 
-- Skills table is loaded from `README.md`.
+- Skill front matter (name + description) is loaded from `skills/**/SKILL.md`.
 - Priority and conflict rules are loaded from `docs/principles.md`.
 - Relevant skills are identified and announced before acting.
 
@@ -39,7 +39,7 @@ and workflow discipline.
 
 ## Process
 
-1. **Inventory**: Read `README.md` and load the Skills table.
+1. **Inventory**: Read each skill's front matter (`name`, `description`) from `skills/**/SKILL.md`.
 2. **Principles**: Read `docs/principles.md` for priority and conflicts.
 3. **Trigger Check**: Match the task to relevant skills.
 4. **Announce**: State which skills apply and why.
