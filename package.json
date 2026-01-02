@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "agent-skills-library",
   "version": "1.0.0",
   "description": "A codified skill library for mixed human/agent teams",
@@ -16,5 +16,7 @@
   ],
   "author": "",
   "license": "ISC",
-  "devDependencies": {}
+  "devDependencies": {
+    "markdownlint-cli": "^0.47.0"
+  }
 }
