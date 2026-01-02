@@ -36,7 +36,7 @@ Ensure that all completed work is objectively verified through evidence before a
 - The "Iron Law": EVIDENCE BEFORE CLAIMS.
 - Every claim is accompanied by fresh, specific verification output (e.g., test results, build logs).
 - A final line-by-line requirements check has been performed.
-- Compilation and quality gates (LTS, zero-warnings) are verified green.
+- Compilation and quality gates (LTS, zero warnings) are verified green (see `quality-gate-enforcement`).
 
 ---
 

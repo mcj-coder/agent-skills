@@ -38,6 +38,7 @@ risk, avoid fragmentation, and keep builds predictable.
 - Version policies are explicit and traceable
 - Components remain buildable/testable under the chosen versions
 - No unnecessary divergence is introduced
+- Tool configuration remains consistent across tools and components (see `automated-standards-enforcement`)
 
 ---
 

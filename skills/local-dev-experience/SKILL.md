@@ -42,6 +42,8 @@ checks (git hooks) are efficient by only targeting staged files.
 - Developers can run the same checks locally as CI expects (conceptually).
 - Bypass paths are controlled and require explicit approval.
 - Documentation explains the local workflow and expectations.
+- Local checks enforce zero warnings and errors (see `quality-gate-enforcement`).
+- Tool configuration is aligned across local and CI tools (see `automated-standards-enforcement`).
 
 ---
 

@@ -12,6 +12,8 @@ description: >
 
 Ensure changes meet required quality standards (clean builds, lint/style,
 analysis) without bypasses, suppressions, or silent degradations.
+All verification outputs (builds, tests, linters, analyzers, security checks)
+must be free of warnings and errors unless explicitly approved.
 
 ---
 
@@ -29,6 +31,7 @@ analysis) without bypasses, suppressions, or silent degradations.
 - Build warnings or errors occur
 - Lint/style violations exist
 - Analysis or security checks report findings
+- Any verification step emits warnings (including non-blocking or advisory ones)
 - Checks were bypassed or disabled for convenience
 
 ---
@@ -36,7 +39,7 @@ analysis) without bypasses, suppressions, or silent degradations.
 ## Postcondition Success Signal
 
 - All required checks pass
-- Builds are clean (zero warnings/errors per repo policy)
+- All verification steps are clean (zero warnings and errors)
 - No global suppressions were introduced without explicit approval
 - Evidence is reviewable and reproducible
 
@@ -47,7 +50,7 @@ analysis) without bypasses, suppressions, or silent degradations.
 1. **Source Review**: Inspect the current quality gate configuration and identify any active suppressions or bypassed checks.
 2. **Implementation**: Fix violations or re-enable checks to ensure the quality gates are fully enforced.
 3. **Verification**: Execute the quality gates and verify that they correctly identify and block failing code.
-4. **Documentation**: Record any unavoidable suppressions or threshold changes; use an ADR if changing the overall quality policy.
+4. **Documentation**: Record any unavoidable suppressions or threshold changes; use an ADR for any exception and obtain explicit user permission.
 5. **Review**: Tech Lead and Security Reviewer review the enforcement status and any new suppressions.
 
 ---
@@ -62,10 +65,10 @@ analysis) without bypasses, suppressions, or silent degradations.
 
 ## Common Red Flags / Guardrail Violations
 
-- Skipping hooks/checks “to save time”
+- Skipping hooks/checks "to save time"
 - Globally disabling lint rules or warnings
-- Marking checks “non-blocking” to get green
-- Accepting new warnings as “known issues” without approval
+- Marking checks "non-blocking" to get green
+- Accepting new warnings as "known issues" without explicit user permission and ADR
 
 ---
 

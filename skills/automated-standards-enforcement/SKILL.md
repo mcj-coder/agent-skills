@@ -15,6 +15,8 @@ tooling to enforce coding standards and development practices. The goal is to
 minimize reliance on subjective human/agent analysis and review, reducing
 hallucinations and ensuring consistent, objective enforcement of quality and
 safety gates.
+Tool configuration must be consistent across tools and components to avoid
+conflicting rules or drift (e.g., aligning editor, formatter, and VCS settings).
 
 ---
 
@@ -37,6 +39,7 @@ safety gates.
 - Quality gates rely on qualitative statements (e.g., "LGTM") rather than quantitative signals.
 - Tooling is non-existent, platform-specific, or poorly documented.
 - Non-opensource tools are used without explicit permission or consideration of alternatives.
+- Tool configuration is inconsistent across tools or components (conflicting rules or defaults).
 
 ---
 
@@ -48,6 +51,7 @@ safety gates.
 - Tooling is cross-platform (e.g., works on Windows, Linux, macOS).
 - Open-source tools are used by default; non-opensource tools have documented user permission and identified alternatives.
 - Enforcement is objective, reproducible, and documented.
+- Tool configuration is aligned across tools and components to prevent drift.
 
 ---
 
@@ -62,6 +66,7 @@ safety gates.
     - Obtain explicit user approval for the selected tool before proceeding with configuration.
 3. **Implementation & Baseline Remediation**:
     - Configure the approved tools (e.g., `.editorconfig`, linters, SAST, ArchUnit.NET).
+    - Align related configuration across tools (e.g., editor, formatter, VCS, CI) to avoid conflicting rules.
     - **Crucial**: Before activating any enforcement gates (e.g., pre-commit hooks, CI blocking), perform a baseline remediation of the existing codebase to ensure it meets the new standard.
     - If the baseline is too large for immediate remediation, define a "warn-only" period or a scoped rollout, but never activate a blocking gate on a dirty baseline without an explicit transition plan.
 4. **Gate Activation**:

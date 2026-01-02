@@ -46,6 +46,7 @@ the same quality gates used for production code.
 - Technical claims in documentation are verified against the actual source code.
 - Documentation has been reviewed by the applicable personas (e.g., Tech Lead, Domain Expert).
 - Review feedback has been incorporated and validated.
+- All documentation checks are clean (zero warnings and errors; see `quality-gate-enforcement`).
 
 ---
 
@@ -56,7 +57,7 @@ the same quality gates used for production code.
 3. **Automated Verification**:
     - Run Markdown linters to ensure structural correctness.
     - Run spell-checkers to identify typos.
-    - Fix all warnings and errors (Zero-Warning policy).
+    - Fix all warnings and errors (see `quality-gate-enforcement`).
 4. **Human/Agent Verification**:
     - Verify that all internal links and file references are valid.
     - Confirm that code snippets in documentation are correct and, if possible, tested.
