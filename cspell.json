@@ -59,7 +59,9 @@
     "tofile",
     "Junie",
     "unimpacted",
-    "Unadopted"
+    "Unadopted",
+    "worktree",
+    "worktrees"
   ],
   "ignorePaths": [
     "node_modules/**",
