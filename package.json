@@ -17,6 +17,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "cspell": "^9.4.0",
     "markdownlint-cli": "^0.47.0"
   }
 }
