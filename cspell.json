@@ -61,7 +61,10 @@
     "unimpacted",
     "Unadopted",
     "worktree",
-    "worktrees"
+    "worktrees",
+    "parallelisation",
+    "Summarise",
+    "artefacts"
   ],
   "ignorePaths": [
     "node_modules/**",

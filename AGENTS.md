@@ -78,20 +78,27 @@ Agents (or humans acting in these roles) should behave as follows:
 
 When starting a new session (human or agent), do the following:
 
-1. **Understand Inventory**: Read `README.md` to understand the full skill library.
-   - Always load the Skills table from `README.md` and use the "When to use" trigger conditions to apply all relevant skills automatically.
-2. **Review Principles**: Read `docs/principles.md` for priority/conflict rules.
-3. **Brainstorm & Plan**: Apply `skills/task-planning-and-brainstorming/SKILL.md`.
+1. **Bootstrap Skills**: Apply `skills/using-skill-library/SKILL.md`.
+   - Load the Skills table from `README.md`.
+   - Read `docs/principles.md` for priority/conflict rules.
+2. **Brainstorm**: Apply `skills/brainstorming/SKILL.md` (or the wrapper `skills/task-planning-and-brainstorming/SKILL.md` if both steps are needed).
    - Explore requirements and design alternatives.
+   - Capture a validated design before planning.
+3. **Plan**: Apply `skills/writing-plans/SKILL.md`.
    - Document a detailed implementation plan in `docs/plans/`.
    - **Present the plan and conflict recommendations to the user for a final decision before proceeding.**
 4. **Assess Impact**: Apply `skills/incremental-change-impact/SKILL.md` to refine the plan based on the impacted set.
-5. **Execute**:
-   - Apply skills according to the agreed plan.
+5. **Prepare Execution**: Apply `skills/using-git-worktrees/SKILL.md` when isolation is required.
+6. **Execute**:
+   - Use `skills/executing-plans/SKILL.md` for batch execution, or
+     `skills/subagent-driven-development/SKILL.md` for per-task delegation.
    - **Follow the defined `Process` in each `SKILL.md`**, specifically ensuring thorough Source Review and Verification through tests.
    - For any bugs or failures encountered, apply `skills/systematic-debugging/SKILL.md`.
    - Document significant design decisions in `docs/adr/`.
-6. **Verify & Handover**:
+7. **Review**:
+   - Apply `skills/requesting-code-review/SKILL.md` and
+     `skills/receiving-code-review/SKILL.md` (or `skills/structured-review-workflow/SKILL.md` as a wrapper).
+8. **Verify & Handover**:
    - Apply `skills/verification-and-handover/SKILL.md` before claiming any task is complete.
-   - Apply `skills/structured-review-workflow/SKILL.md` when requesting review or processing feedback.
-7. **Record**: Document any new overlaps/conflicts discovered and resolve via the priority model.
+   - Apply `skills/finishing-a-development-branch/SKILL.md` to integrate or close work safely.
+9. **Record**: Document any new overlaps/conflicts discovered and resolve via the priority model.

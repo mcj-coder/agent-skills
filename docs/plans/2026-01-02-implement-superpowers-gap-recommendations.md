@@ -1,6 +1,6 @@
 # Implement Superpowers Gap Recommendations Plan
 
-> Status: Draft | Approved | In Progress | Delivered | Aborted
+> Status: Delivered
 > Owner: Codex
 > Date: 2026-01-02
 
@@ -33,19 +33,47 @@ Implement the full set of gap recommendations from the Superpowers comparison to
 2. Full rewrite of workflow section (higher risk, larger review surface).
 3. Incremental add + refactor in phases (chosen).
 
+## Target Skill Set
+
+New skills to add:
+
+- `brainstorming`
+- `writing-plans`
+- `executing-plans`
+- `subagent-driven-development`
+- `dispatching-parallel-agents`
+- `using-git-worktrees`
+- `finishing-a-development-branch`
+- `requesting-code-review`
+- `receiving-code-review`
+- `using-skill-library`
+- `writing-skills`
+
+Existing skills to refactor:
+
+- `task-planning-and-brainstorming` (becomes wrapper or deprecates in favour of `brainstorming` + `writing-plans`).
+- `structured-review-workflow` (becomes wrapper referencing `requesting-code-review` + `receiving-code-review`).
+
+Conflict and priority notes:
+
+- Process/discipline skills remain P1/P2 to override delivery pressure.
+- Delivery coordination skills (parallel or subagent execution) remain P3.
+- Wrapper skills must not override the postconditions of the composed skills.
+
 ## Task Checklist
 
-| ID  | Task                                                                                                                         | Status  | Verification | Evidence |
-| --- | ---------------------------------------------------------------------------------------------------------------------------- | ------- | ------------ | -------- |
-| 1   | Define target skill set and mapping (new + split) and review for conflicts/priority.                                         | Planned |              |          |
-| 2   | Create new workflow skills: `brainstorming`, `writing-plans`, `executing-plans`.                                             | Planned |              |          |
-| 3   | Create execution orchestration skills: `subagent-driven-development`, `dispatching-parallel-agents`.                         | Planned |              |          |
-| 4   | Create workspace and closure skills: `using-git-worktrees`, `finishing-a-development-branch`.                                | Planned |              |          |
-| 5   | Split review workflow: add `requesting-code-review` + `receiving-code-review`; keep `structured-review-workflow` as wrapper. | Planned |              |          |
-| 6   | Add bootstrap skill: `using-skill-library` (or agreed name) to formalize skill discovery.                                    | Planned |              |          |
-| 7   | Add skill authoring discipline: `writing-skills` (or adapt `skill-creator`).                                                 | Planned |              |          |
-| 8   | Update `README.md` skills table and `AGENTS.md` workflow to reference new skills.                                            | Planned |              |          |
-| 9   | Run `npm run verify` and document results.                                                                                   | Planned |              |          |
+| ID  | Task                                                                                                                         | Status | Verification                                     | Evidence                                                                                                                  |
+| --- | ---------------------------------------------------------------------------------------------------------------------------- | ------ | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------- |
+| 1   | Define target skill set and mapping (new + split) and review for conflicts/priority.                                         | Done   | Target set and conflict notes documented.        | Target Skill Set section in this plan.                                                                                    |
+| 2   | Create new workflow skills: `brainstorming`, `writing-plans`, `executing-plans`.                                             | Done   | New skill files created.                         | skills/brainstorming/SKILL.md; skills/writing-plans/SKILL.md; skills/executing-plans/SKILL.md                             |
+| 2a  | Refactor `task-planning-and-brainstorming` as a wrapper.                                                                     | Done   | Wrapper updated to reference new skills.         | skills/task-planning-and-brainstorming/SKILL.md                                                                           |
+| 3   | Create execution orchestration skills: `subagent-driven-development`, `dispatching-parallel-agents`.                         | Done   | New skill files created.                         | skills/subagent-driven-development/SKILL.md; skills/dispatching-parallel-agents/SKILL.md                                  |
+| 4   | Create workspace and closure skills: `using-git-worktrees`, `finishing-a-development-branch`.                                | Done   | New skill files created.                         | skills/using-git-worktrees/SKILL.md; skills/finishing-a-development-branch/SKILL.md                                       |
+| 5   | Split review workflow: add `requesting-code-review` + `receiving-code-review`; keep `structured-review-workflow` as wrapper. | Done   | New skills added and wrapper updated.            | skills/requesting-code-review/SKILL.md; skills/receiving-code-review/SKILL.md; skills/structured-review-workflow/SKILL.md |
+| 6   | Add bootstrap skill: `using-skill-library` (or agreed name) to formalize skill discovery.                                    | Done   | New skill file created.                          | skills/using-skill-library/SKILL.md                                                                                       |
+| 7   | Add skill authoring discipline: `writing-skills` (or adapt `skill-creator`).                                                 | Done   | New skill file created.                          | skills/writing-skills/SKILL.md                                                                                            |
+| 8   | Update `README.md` skills table and `AGENTS.md` workflow to reference new skills.                                            | Done   | Docs updated to include new skills and workflow. | README.md; AGENTS.md                                                                                                      |
+| 9   | Run `npm run verify` and document results.                                                                                   | Done   | `npm run verify`                                 | Output logged on 2026-01-02.                                                                                              |
 
 Notes:
 
@@ -55,15 +83,18 @@ Notes:
 ## Progress Log
 
 - 2026-01-02: Plan drafted for approval.
+- 2026-01-02: Created new workflow, orchestration, workspace, review, bootstrap, and skill-authoring skills; wrappers updated in progress.
+- 2026-01-02: Target skill set and conflict notes documented; execution started.
+- 2026-01-02: README and AGENTS workflow updated to reference new skills.
 
 ## Finalization
 
-> Outcome: Pending
+> Outcome: Delivered
 > Date: 2026-01-02
 
 ### Verification Summary
 
--
+- `npm run verify`
 
 ### References
 
