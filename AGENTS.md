@@ -79,6 +79,7 @@ Agents (or humans acting in these roles) should behave as follows:
 When starting a new session (human or agent), do the following:
 
 1. **Understand Inventory**: Read `README.md` to understand the full skill library.
+   - Always load the Skills table from `README.md` and use the "When to use" trigger conditions to apply all relevant skills automatically.
 2. **Review Principles**: Read `docs/principles.md` for priority/conflict rules.
 3. **Brainstorm & Plan**: Apply `skills/task-planning-and-brainstorming/SKILL.md`.
    - Explore requirements and design alternatives.
