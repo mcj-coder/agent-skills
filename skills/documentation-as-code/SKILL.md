@@ -47,6 +47,7 @@ the same quality gates used for production code.
 - Documentation has been reviewed by the applicable personas (e.g., Tech Lead, Domain Expert).
 - Review feedback has been incorporated and validated.
 - All documentation checks are clean (zero warnings and errors; see `quality-gate-enforcement`).
+- Plans in `docs/plans/` use `templates/plan_template.md` and include task status and verification evidence.
 
 ---
 
@@ -58,6 +59,7 @@ the same quality gates used for production code.
     - Run Markdown linters to ensure structural correctness.
     - Run spell-checkers to identify typos.
     - Fix all warnings and errors (see `quality-gate-enforcement`).
+    - If the repository includes plan verification (for example, `npm run verify:plans`), run it and resolve all failures.
 4. **Human/Agent Verification**:
     - Verify that all internal links and file references are valid.
     - Confirm that code snippets in documentation are correct and, if possible, tested.

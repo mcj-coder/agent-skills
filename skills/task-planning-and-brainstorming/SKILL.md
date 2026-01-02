@@ -36,6 +36,7 @@ Ensure that tasks are well-understood, architecturally sound, and broken down in
 - A validated design/plan exists in `docs/plans/YYYY-MM-DD-<name>.md`.
 - The plan includes 2-3 design alternatives with trade-offs.
 - The plan is broken into atomic tasks (2-5 minutes each).
+- The plan includes per-task status and verification evidence for recovery and traceability.
 - The user has approved the plan before execution.
 
 ---
@@ -48,9 +49,11 @@ Ensure that tasks are well-understood, architecturally sound, and broken down in
    - Propose 2-3 different approaches with trade-offs.
    - Present design in small sections (200-300 words) for incremental validation.
 3. **Planning**:
-   - Break the chosen design into bite-sized tasks (RED -> GREEN -> REFACTOR -> COMMIT).
-   - Specify exact file paths and mandatory commands.
-   - Include a mandatory plan header (Goal, Architecture, Tech Stack).
+    - Break the chosen design into bite-sized tasks (RED -> GREEN -> REFACTOR -> COMMIT).
+    - Specify exact file paths and mandatory commands.
+    - Include a mandatory plan header (Goal, Architecture, Tech Stack).
+    - Use `templates/plan_template.md` and keep the Task Checklist updated with status + verification evidence.
+    - Keep the Finalization section current so delivery or abortion is recoverable.
 4. **Documentation**: Save the plan to `docs/plans/` and commit it.
 5. **Review**: Tech Lead reviews the plan for architectural integrity and YAGNI adherence.
 

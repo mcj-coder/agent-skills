@@ -152,3 +152,7 @@ Include clarifications, edge cases, or important context that does not fit
 cleanly elsewhere.
 
 Avoid speculative or future-facing guidance.
+
+If this skill produces a plan, use `templates/plan_template.md` and keep the
+Task Checklist updated (Status/Verification/Evidence), including Finalization
+on delivery or abort.

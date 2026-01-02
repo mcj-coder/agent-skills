@@ -1,6 +1,9 @@
-﻿# Implement Workflow Skills Implementation Plan
+# Implement Workflow Skills Implementation Plan
 
 > **For Claude:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task.
+> Status: Draft
+> Owner: TBD
+> Date: 2026-01-02
 
 **Goal:** Bridge the gap between the engineering-focused library and the Claude workflow skills by implementing 4 new high-level workflow skills.
 
@@ -149,3 +152,30 @@ Add a principle about "Evidence-Driven Workflow" (from Systematic Debugging and 
 git add README.md AGENTS.md docs/principles.md
 git commit -m "chore: integrate workflow skills into core documentation"
 ```
+
+## Task Checklist
+
+|ID|Task|Status|Verification|Evidence|
+|---|---|---|---|---|
+|1|Create task-planning-and-brainstorming skill|Planned|||
+|2|Create systematic-debugging skill|Planned|||
+|3|Create verification-and-handover skill|Planned|||
+|4|Create structured-review-workflow skill|Planned|||
+|5|Integrate into core documentation|Planned|||
+
+## Progress Log
+
+- 2026-01-02: Template retrofit; no execution recorded.
+
+## Finalization
+
+> Outcome: Pending
+> Date: TBD
+
+### Verification Summary
+
+- Not executed; template retrofit only.
+
+### References
+
+- docs/plans/2026-01-02-implement-workflow-skills.md

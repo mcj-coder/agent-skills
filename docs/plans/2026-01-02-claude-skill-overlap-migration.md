@@ -1,5 +1,11 @@
 # Claude Skill Overlap Migration Plan
 
+> Status: Draft
+> Owner: TBD
+> Date: 2026-01-02
+> Owner: TBD
+> Date: 2026-01-02
+
 ## Goal
 
 Improve the overlapping repo skills by adding concise, high-value guidance and referencing curated detail from Claude skills without bloating the main skill definitions.
@@ -58,6 +64,16 @@ Markdown.
 
    - Run `npm run verify` and resolve issues.
 
+## Task Checklist
+
+|ID|Task|Status|Verification|Evidence|
+|---|---|---|---|---|
+|1|Source review|Planned|||
+|2|Draft references|Planned|||
+|3|Update skills|Planned|||
+|4|Documentation checks|Planned|||
+|5|Verification run|Planned|||
+
 ## Files to change/add
 
 - Update: skills/aspire-integration-testing/SKILL.md
@@ -83,3 +99,20 @@ Markdown.
 - Keep all new content ASCII-only.
 
 - Avoid duplicating full Claude skill content; only migrate missing, required detail.
+
+## Progress Log
+
+- 2026-01-02: Template retrofit; no execution recorded.
+
+## Finalization
+
+> Outcome: Pending
+> Date: TBD
+
+### Verification Summary
+
+- Not executed; template retrofit only.
+
+### References
+
+- docs/plans/2026-01-02-claude-skill-overlap-migration.md
