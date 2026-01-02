@@ -1,0 +1,7 @@
+{
+  "sourceRoot": "skills/incremental-deployment",
+  "targets": {},
+  "root": "skills/incremental-deployment",
+  "name": "incremental-deployment",
+  "projectType": "library"
+}

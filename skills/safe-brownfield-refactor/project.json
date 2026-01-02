@@ -1,0 +1,7 @@
+{
+  "sourceRoot": "skills/safe-brownfield-refactor",
+  "targets": {},
+  "root": "skills/safe-brownfield-refactor",
+  "name": "safe-brownfield-refactor",
+  "projectType": "library"
+}

@@ -1,0 +1,7 @@
+{
+  "sourceRoot": "skills/modern-csharp-coding-standards",
+  "targets": {},
+  "root": "skills/modern-csharp-coding-standards",
+  "name": "modern-csharp-coding-standards",
+  "projectType": "library"
+}

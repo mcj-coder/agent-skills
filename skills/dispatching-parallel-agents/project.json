@@ -1,0 +1,7 @@
+{
+  "sourceRoot": "skills/dispatching-parallel-agents",
+  "targets": {},
+  "root": "skills/dispatching-parallel-agents",
+  "name": "dispatching-parallel-agents",
+  "projectType": "library"
+}

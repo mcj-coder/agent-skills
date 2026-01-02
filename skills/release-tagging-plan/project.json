@@ -1,0 +1,7 @@
+{
+  "sourceRoot": "skills/release-tagging-plan",
+  "targets": {},
+  "root": "skills/release-tagging-plan",
+  "name": "release-tagging-plan",
+  "projectType": "library"
+}

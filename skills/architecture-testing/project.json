@@ -1,0 +1,7 @@
+{
+  "sourceRoot": "skills/architecture-testing",
+  "targets": {},
+  "root": "skills/architecture-testing",
+  "name": "architecture-testing",
+  "projectType": "library"
+}

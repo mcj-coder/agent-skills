@@ -1,0 +1,7 @@
+{
+  "sourceRoot": "skills/monorepo-orchestration-setup",
+  "targets": {},
+  "root": "skills/monorepo-orchestration-setup",
+  "name": "monorepo-orchestration-setup",
+  "projectType": "library"
+}

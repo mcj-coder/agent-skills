@@ -20,6 +20,9 @@ with the goal of portability across multiple projects and adoption by teams.
   - Deployable components are versioned independently (semantic versioning + conventional commits)
   - During build and deployment, **only modified/impacted components** should be built/tested/deployed
   - Tags should be used in deployment records to track which component versions are deployed to environments
+  - Default branch is protected: no direct commits to `main`; required checks include Docs Quality, Commit Lint, and Secretlint
+  - Per-skill semantic version tags are created on `main` via Nx release using `skill/<name>/vX.Y.Z`
+  - Release/deploy pipelines are out of scope for this repository
 - Reuse strategy:
   - Reusable functionality is developed in an application repo until stable, then extracted into standalone repos and versioned independently.
   - Co-location is required at the **narrowest meaningful scope** (not just “same repo”).

@@ -1,0 +1,7 @@
+{
+  "sourceRoot": "skills/library-extraction-stabilisation",
+  "targets": {},
+  "root": "skills/library-extraction-stabilisation",
+  "name": "library-extraction-stabilisation",
+  "projectType": "library"
+}

@@ -1,0 +1,7 @@
+{
+  "sourceRoot": "skills/static-analysis-security",
+  "targets": {},
+  "root": "skills/static-analysis-security",
+  "name": "static-analysis-security",
+  "projectType": "library"
+}

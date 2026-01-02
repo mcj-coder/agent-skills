@@ -1,0 +1,7 @@
+{
+  "sourceRoot": "skills/using-skill-library",
+  "targets": {},
+  "root": "skills/using-skill-library",
+  "name": "using-skill-library",
+  "projectType": "library"
+}

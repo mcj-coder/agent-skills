@@ -1,0 +1,7 @@
+{
+  "sourceRoot": "skills/using-git-worktrees",
+  "targets": {},
+  "root": "skills/using-git-worktrees",
+  "name": "using-git-worktrees",
+  "projectType": "library"
+}

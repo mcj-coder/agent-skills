@@ -1,0 +1,7 @@
+{
+  "sourceRoot": "skills/change-risk-rollback",
+  "targets": {},
+  "root": "skills/change-risk-rollback",
+  "name": "change-risk-rollback",
+  "projectType": "library"
+}

@@ -1,0 +1,7 @@
+{
+  "sourceRoot": "skills/verification-and-handover",
+  "targets": {},
+  "root": "skills/verification-and-handover",
+  "name": "verification-and-handover",
+  "projectType": "library"
+}

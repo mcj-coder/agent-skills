@@ -1,0 +1,7 @@
+{
+  "sourceRoot": "skills/semantic-version-impact",
+  "targets": {},
+  "root": "skills/semantic-version-impact",
+  "name": "semantic-version-impact",
+  "projectType": "library"
+}

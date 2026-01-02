@@ -1,0 +1,7 @@
+{
+  "sourceRoot": "skills/subagent-driven-development",
+  "targets": {},
+  "root": "skills/subagent-driven-development",
+  "name": "subagent-driven-development",
+  "projectType": "library"
+}

@@ -1,0 +1,7 @@
+{
+  "sourceRoot": "skills/greenfield-baseline",
+  "targets": {},
+  "root": "skills/greenfield-baseline",
+  "name": "greenfield-baseline",
+  "projectType": "library"
+}
