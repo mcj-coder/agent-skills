@@ -15,6 +15,7 @@ with the goal of portability across multiple projects and adoption by teams.
   - Use latest **LTS** versions of key runtimes (e.g., .NET, Node.js, Python) with appropriate tooling
   - Default branch: `main`
   - Releases are **immutable**, **versioned**, and **tagged**
+  - **Documentation as Code (DaC)**: All documentation (Markdown, ADRs, Plans) must be treated with the same rigor as source code (linted, spell-checked, verified, and reviewed).
   - **5-Tier Testing Strategy**: Implement and enforce `ArchitectureTest`, `UnitTest`, `SystemTest`, `ComponentE2E`, and `E2E` tiers according to the execution matrix.
   - Deployable components are versioned independently (semantic versioning + conventional commits)
   - During build and deployment, **only modified/impacted components** should be built/tested/deployed

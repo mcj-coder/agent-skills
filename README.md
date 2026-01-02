@@ -39,6 +39,7 @@ consistent with **DRY** and **YAGNI**.
 | `systematic-debugging` | Use this skill whenever encountering any bug, test failure, or unexpected behaviour to identify root cause before proposing fixes. |
 | `verification-and-handover` | Use this skill whenever claiming a task is complete, a bug is fixed, or preparing to handover/submit work to ensure all success criteria are met with evidence. |
 | `structured-review-workflow` | Use this skill whenever requesting or receiving feedback on work to ensure clear communication, objective validation, and efficient iteration. |
+| `documentation-as-code` | Use this skill whenever creating, modifying, or reviewing documentation (Markdown, ADRs, PLANS, READMEs) to ensure it is treated with the same rigor as source code: linted, spell-checked, verified, and reviewed. |
 | `test-driven-development` | Use this skill whenever implementing any feature or bugfix to ensure behaviour is defined by tests before implementation. |
 | `aspire-integration-testing` | Use this skill whenever implementing or reviewing cross-component integration tests or smoke tests for .NET Aspire applications to ensure distributed system integrity. |
 | `testcontainers-integration-tests` | Use this skill whenever implementing or reviewing integration tests that require real infrastructure (databases, queues, caches) for single-component validation. |
