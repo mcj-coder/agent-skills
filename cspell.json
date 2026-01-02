@@ -67,6 +67,8 @@
     "artefacts",
     "Reorganising",
     "Centralising"
+    ,
+    "gitlint"
   ],
   "ignorePaths": [
     "node_modules/**",

@@ -2,6 +2,25 @@ name: Docs Quality
 
 on:
   pull_request:
+    paths:
+      - "**/*.md"
+      - ".markdownlint-cli2.yaml"
+      - ".markdownlint.json"
+      - ".markdownlintignore"
+      - "cspell.json"
+      - "package.json"
+      - "package-lock.json"
+  push:
+    branches:
+      - main
+    paths:
+      - "**/*.md"
+      - ".markdownlint-cli2.yaml"
+      - ".markdownlint.json"
+      - ".markdownlintignore"
+      - "cspell.json"
+      - "package.json"
+      - "package-lock.json"
 
 permissions:
   contents: read

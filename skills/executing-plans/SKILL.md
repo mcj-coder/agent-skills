@@ -25,6 +25,7 @@ keeping plan status and evidence up to date.
 
 - Plan steps are skipped or reordered without approval.
 - No status updates or evidence are recorded in the plan.
+- Tasks are marked Done without executing their verification steps.
 - Execution continues after a blocker without clarification.
 
 ---
@@ -32,6 +33,7 @@ keeping plan status and evidence up to date.
 ## Postcondition Success Signal
 
 - Each executed task is marked in the plan with verification evidence.
+- Tasks are not marked Done until verification steps are run and evidence is recorded.
 - Blockers are raised immediately and resolved before proceeding.
 - Progress is reported between batches.
 
@@ -44,8 +46,8 @@ keeping plan status and evidence up to date.
 3. **Execute Batch**:
    - Mark tasks In Progress.
    - Follow steps exactly (including tests).
-   - Record verification evidence.
-   - Mark tasks Done only after evidence is recorded.
+   - Record verification evidence (command output, link, or note).
+   - Mark tasks Done only after verification steps have run and evidence is recorded.
 4. **Report**: Summarise changes and verification for the batch.
 5. **Checkpoint**: Wait for feedback before next batch.
 6. **Complete**: After final batch, move to `finishing-a-development-branch`.

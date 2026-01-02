@@ -35,6 +35,7 @@ review, and recover after interruptions.
 - Plan exists in `docs/plans/YYYY-MM-DD-<name>.md` using `skills/writing-plans/templates/plan_template.md`.
 - Tasks are atomic and follow RED -> GREEN -> REFACTOR -> COMMIT.
 - Each task includes exact file paths and verification commands.
+- Tasks are only marked Done after verification steps are executed and evidence is recorded.
 - The user approves the plan before execution begins.
 - Required review evidence is recorded before marking the plan Delivered.
 - Plan is only marked Delivered with explicit user permission.
@@ -50,6 +51,7 @@ review, and recover after interruptions.
    - Exact file paths (create/modify/test).
    - RED/GREEN/REFACTOR steps.
    - Commands to run and expected outcomes.
+   - Evidence capture requirements for verification output.
    - Commit guidance.
 5. **Verification**: Ensure plan tasks include explicit verification steps.
 6. **Approval**: Present plan and wait for user approval.
