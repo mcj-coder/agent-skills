@@ -52,21 +52,21 @@ Conflict resolution:
 
 Agents (or humans acting in these roles) should behave as follows:
 
-- **Software Engineer** (formerly Execution Agent)
+- **Software Engineer**
   - Identifies and applies all relevant skills to a scoped task.
   - Must not broaden scope beyond the skills’ “When to Use” and the task statement.
   - Responsible for TDD-driven implementation and adhering to DRY/YAGNI.
 
-- **Tech Lead / Senior Developer** (formerly Review Agent)
+- **Tech Lead / Senior Developer**
   - Reviews outputs independently using the skill’s review personas.
   - Must validate spirit and scope adherence, not just “green checks”.
   - Resolves architectural conflicts and skill priority escalations.
 
-- **Platform & DevOps Engineer** (formerly Change Impact Agent)
+- **Platform & DevOps Engineer**
   - Runs `incremental-change-impact` first and produces an explicit impacted/unimpacted set.
   - Validates build/test/deploy scope alignment and CI/CD conformance.
 
-- **Release Manager / SRE** (formerly Release/Traceability Agent)
+- **Release Manager / SRE**
   - Ensures tag/version provenance and environment mappings are explicit and immutable.
   - Validates release plans and rollback paths.
 
