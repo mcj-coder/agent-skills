@@ -35,6 +35,10 @@ consistent with **DRY** and **YAGNI**.
 | `automated-standards-enforcement` | Use this skill whenever establishing, reviewing, or modifying engineering standards to prefer automated tooling (linters, SAST, architectural unit tests) over manual developer or agent behavior for enforcement. |
 | `technical-debt-prioritisation` | Use this skill when assessing brownfield areas to identify, classify, and prioritise technical debt in a way that supports delivery goals and reduces risk over time. |
 | `change-risk-rollback` | Use this skill whenever a change is intended for release or deployment to assess operational risk, identify failure modes, and ensure rollback paths are explicit and realistic. |
+| `task-planning-and-brainstorming` | Use this skill before starting any creative work or multi-step implementation to explore requirements, design alternatives, and document a detailed execution plan. |
+| `systematic-debugging` | Use this skill whenever encountering any bug, test failure, or unexpected behaviour to identify root cause before proposing fixes. |
+| `verification-and-handover` | Use this skill whenever claiming a task is complete, a bug is fixed, or preparing to handover/submit work to ensure all success criteria are met with evidence. |
+| `structured-review-workflow` | Use this skill whenever requesting or receiving feedback on work to ensure clear communication, objective validation, and efficient iteration. |
 | `test-driven-development` | Use this skill whenever implementing any feature or bugfix to ensure behaviour is defined by tests before implementation. |
 | `aspire-integration-testing` | Use this skill whenever implementing or reviewing cross-component integration tests or smoke tests for .NET Aspire applications to ensure distributed system integrity. |
 | `testcontainers-integration-tests` | Use this skill whenever implementing or reviewing integration tests that require real infrastructure (databases, queues, caches) for single-component validation. |

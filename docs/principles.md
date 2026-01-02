@@ -38,3 +38,9 @@ Architectural changes or significant design decisions must be documented as Arch
 Every skill defines a mandatory `Process` section.
 - Agents and humans must follow these steps to ensure quality and minimize hallucinations.
 - **Source Review** and **Verification** are non-negotiable steps to guarantee that changes are grounded in evidence and verified by tests.
+
+## Evidence-Driven Workflow
+The repository enforces an evidence-driven workflow to minimize subjectivity and errors:
+- **Root Cause over Symptoms**: No fix may be proposed without identifying the root cause via `systematic-debugging`.
+- **Evidence before Claims**: No status or completion claim may be made without fresh verification output via `verification-and-handover`.
+- **Automated over Manual**: Automated tooling takes precedence over manual/agent analysis via `automated-standards-enforcement`.

@@ -76,14 +76,17 @@ When starting a new session (human or agent), do the following:
 
 1. **Understand Inventory**: Read `README.md` to understand the full skill library.
 2. **Review Principles**: Read `docs/principles.md` for priority/conflict rules.
-3. **Assess Impact**: For the current task, start with `skills/incremental-change-impact/SKILL.md`.
-4. **Identify Skills**: Select **all** relevant skill(s) based on the impacted set and stated intent.
-5. **Plan & Resolve**: 
-   - Identify any conflicts between selected skills.
-   - Formulate recommendations for conflict resolution using the canonical priority model.
+3. **Brainstorm & Plan**: Apply `skills/task-planning-and-brainstorming/SKILL.md`.
+   - Explore requirements and design alternatives.
+   - Document a detailed implementation plan in `docs/plans/`.
    - **Present the plan and conflict recommendations to the user for a final decision before proceeding.**
-6. **Execute**: 
+4. **Assess Impact**: Apply `skills/incremental-change-impact/SKILL.md` to refine the plan based on the impacted set.
+5. **Execute**: 
    - Apply skills according to the agreed plan.
    - **Follow the defined `Process` in each `SKILL.md`**, specifically ensuring thorough Source Review and Verification through tests.
-   - Document any significant design decisions in `docs/adr/`.
+   - For any bugs or failures encountered, apply `skills/systematic-debugging/SKILL.md`.
+   - Document significant design decisions in `docs/adr/`.
+6. **Verify & Handover**: 
+   - Apply `skills/verification-and-handover/SKILL.md` before claiming any task is complete.
+   - Apply `skills/structured-review-workflow/SKILL.md` when requesting review or processing feedback.
 7. **Record**: Document any new overlaps/conflicts discovered and resolve via the priority model.
