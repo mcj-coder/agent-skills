@@ -29,6 +29,7 @@ commits, safe merges, and explicit handling for parallel work.
 - Merge commits are used for integration.
 - Commit messages are non-conventional or verbose.
 - Commit message rules are documented but not enforced by hooks or CI.
+- Local hooks allow commits on the default branch.
 - Feature branches lack traceability to tickets/issues when available.
 - Parallel work on a feature branch is done without isolated task branches.
 
@@ -39,6 +40,7 @@ commits, safe merges, and explicit handling for parallel work.
 - All work lands via feature branches (no direct commits to `main`).
 - Integration uses fast-forward or rebase-only merges (no merge commits).
 - Conventional commits are enforced with concise titles and descriptions.
+- Local hooks block commits to the default branch.
 - Ticket/issue identifiers are included when available.
 - Parallel tasks use transient task branches and merge back after verification.
 
@@ -55,6 +57,7 @@ commits, safe merges, and explicit handling for parallel work.
    - Parallel work uses transient task branches per worktree.
 3. **Implementation**:
    - Configure a `commit-msg` hook and CI to block non-conventional commits.
+   - Add a `pre-commit` hook to block commits on the default branch.
    - Enforce merge policy via branch protection or repo settings.
    - Document branch naming and ticket linkage expectations.
 4. **Verification**: Demonstrate a conventional commit is accepted and a
@@ -70,6 +73,7 @@ commits, safe merges, and explicit handling for parallel work.
 
 - A feature branch merge succeeds only with rebase/fast-forward and a
   conventional commit message.
+- A commit attempt on the default branch is blocked by the pre-commit hook.
 
 ---
 
@@ -80,6 +84,7 @@ commits, safe merges, and explicit handling for parallel work.
 - Missing ticket identifiers when issues exist.
 - Reusing a single branch for parallel tasks without isolation.
 - Relying on documentation alone instead of automated enforcement.
+- Bypassing local hooks to commit on the default branch.
 
 ---
 
