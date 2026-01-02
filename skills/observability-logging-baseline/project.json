@@ -1,0 +1,7 @@
+{
+  "sourceRoot": "skills/observability-logging-baseline",
+  "targets": {},
+  "root": "skills/observability-logging-baseline",
+  "name": "observability-logging-baseline",
+  "projectType": "library"
+}

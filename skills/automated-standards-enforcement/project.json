@@ -1,0 +1,7 @@
+{
+  "sourceRoot": "skills/automated-standards-enforcement",
+  "targets": {},
+  "root": "skills/automated-standards-enforcement",
+  "name": "automated-standards-enforcement",
+  "projectType": "library"
+}

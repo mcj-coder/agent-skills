@@ -1,0 +1,7 @@
+{
+  "sourceRoot": "skills/contract-consistency-validation",
+  "targets": {},
+  "root": "skills/contract-consistency-validation",
+  "name": "contract-consistency-validation",
+  "projectType": "library"
+}

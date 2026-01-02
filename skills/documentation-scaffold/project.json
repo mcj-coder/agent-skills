@@ -1,0 +1,7 @@
+{
+  "sourceRoot": "skills/documentation-scaffold",
+  "targets": {},
+  "root": "skills/documentation-scaffold",
+  "name": "documentation-scaffold",
+  "projectType": "library"
+}

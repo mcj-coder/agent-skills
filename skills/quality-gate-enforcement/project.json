@@ -1,0 +1,7 @@
+{
+  "sourceRoot": "skills/quality-gate-enforcement",
+  "targets": {},
+  "root": "skills/quality-gate-enforcement",
+  "name": "quality-gate-enforcement",
+  "projectType": "library"
+}

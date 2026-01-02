@@ -1,0 +1,7 @@
+{
+  "sourceRoot": "skills/technical-debt-prioritisation",
+  "targets": {},
+  "root": "skills/technical-debt-prioritisation",
+  "name": "technical-debt-prioritisation",
+  "projectType": "library"
+}

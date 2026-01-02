@@ -1,0 +1,7 @@
+{
+  "sourceRoot": "skills/repository-foundation-bootstrap",
+  "targets": {},
+  "root": "skills/repository-foundation-bootstrap",
+  "name": "repository-foundation-bootstrap",
+  "projectType": "library"
+}

@@ -74,8 +74,14 @@ consistent with **DRY** and **YAGNI**.
 - Local verification: `npm run verify` (markdownlint + cspell).
 - Pre-commit: Husky runs `lint-staged` (prettier, markdownlint, cspell, secretlint) on staged files.
 - Commit messages: Husky enforces Conventional Commits via commitlint.
-- CI: GitHub Actions runs the same `npm run verify` gate on PRs and pushes to `main` when documentation or lint/spell config files change.
-- Branch protection: require the `Docs Quality` status check on `main` before merge.
+- CI: GitHub Actions runs `npm run verify` and `npm run secretlint` on PRs and pushes to `main`.
+- Branch protection: no direct pushes to `main`; require `Docs Quality`, `Commit Lint`, and `Secretlint` checks before merge.
+- CI/CD scope: this repo does not run release/deploy workflows; tag-based deployment is out of scope for now.
+
+## Versioning
+
+- Per-skill tags are created on `main` via Nx release using the format `skill/<name>/vX.Y.Z`.
+- Use `npx nx release --yes --skip-publish` in CI to create tags without publishing.
 
 ## Contributing
 

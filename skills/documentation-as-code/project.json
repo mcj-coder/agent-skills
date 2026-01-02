@@ -1,0 +1,7 @@
+{
+  "sourceRoot": "skills/documentation-as-code",
+  "targets": {},
+  "root": "skills/documentation-as-code",
+  "name": "documentation-as-code",
+  "projectType": "library"
+}

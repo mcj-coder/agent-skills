@@ -1,0 +1,7 @@
+{
+  "sourceRoot": "skills/incremental-change-impact",
+  "targets": {},
+  "root": "skills/incremental-change-impact",
+  "name": "incremental-change-impact",
+  "projectType": "library"
+}

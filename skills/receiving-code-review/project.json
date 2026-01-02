@@ -1,0 +1,7 @@
+{
+  "sourceRoot": "skills/receiving-code-review",
+  "targets": {},
+  "root": "skills/receiving-code-review",
+  "name": "receiving-code-review",
+  "projectType": "library"
+}

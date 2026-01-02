@@ -1,0 +1,7 @@
+{
+  "sourceRoot": "skills/ci-cd-conformance",
+  "targets": {},
+  "root": "skills/ci-cd-conformance",
+  "name": "ci-cd-conformance",
+  "projectType": "library"
+}

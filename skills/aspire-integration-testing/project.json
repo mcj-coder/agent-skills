@@ -1,0 +1,7 @@
+{
+  "sourceRoot": "skills/aspire-integration-testing",
+  "targets": {},
+  "root": "skills/aspire-integration-testing",
+  "name": "aspire-integration-testing",
+  "projectType": "library"
+}

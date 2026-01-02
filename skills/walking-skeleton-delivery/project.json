@@ -1,0 +1,7 @@
+{
+  "sourceRoot": "skills/walking-skeleton-delivery",
+  "targets": {},
+  "root": "skills/walking-skeleton-delivery",
+  "name": "walking-skeleton-delivery",
+  "projectType": "library"
+}

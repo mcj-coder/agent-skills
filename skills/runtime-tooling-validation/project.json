@@ -1,0 +1,7 @@
+{
+  "sourceRoot": "skills/runtime-tooling-validation",
+  "targets": {},
+  "root": "skills/runtime-tooling-validation",
+  "name": "runtime-tooling-validation",
+  "projectType": "library"
+}

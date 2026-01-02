@@ -1,0 +1,7 @@
+{
+  "sourceRoot": "skills/test-driven-development",
+  "targets": {},
+  "root": "skills/test-driven-development",
+  "name": "test-driven-development",
+  "projectType": "library"
+}

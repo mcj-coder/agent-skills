@@ -1,0 +1,7 @@
+{
+  "sourceRoot": "skills/testcontainers-integration-tests",
+  "targets": {},
+  "root": "skills/testcontainers-integration-tests",
+  "name": "testcontainers-integration-tests",
+  "projectType": "library"
+}

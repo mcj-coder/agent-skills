@@ -1,0 +1,7 @@
+{
+  "sourceRoot": "skills/writing-skills",
+  "targets": {},
+  "root": "skills/writing-skills",
+  "name": "writing-skills",
+  "projectType": "library"
+}

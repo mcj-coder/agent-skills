@@ -1,0 +1,7 @@
+{
+  "sourceRoot": "skills/structured-review-workflow",
+  "targets": {},
+  "root": "skills/structured-review-workflow",
+  "name": "structured-review-workflow",
+  "projectType": "library"
+}

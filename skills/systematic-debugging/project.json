@@ -1,0 +1,7 @@
+{
+  "sourceRoot": "skills/systematic-debugging",
+  "targets": {},
+  "root": "skills/systematic-debugging",
+  "name": "systematic-debugging",
+  "projectType": "library"
+}

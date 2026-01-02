@@ -1,0 +1,7 @@
+{
+  "sourceRoot": "skills/selective-build-test",
+  "targets": {},
+  "root": "skills/selective-build-test",
+  "name": "selective-build-test",
+  "projectType": "library"
+}

@@ -1,0 +1,7 @@
+{
+  "sourceRoot": "skills/local-dev-experience",
+  "targets": {},
+  "root": "skills/local-dev-experience",
+  "name": "local-dev-experience",
+  "projectType": "library"
+}

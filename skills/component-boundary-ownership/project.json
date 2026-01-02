@@ -1,0 +1,7 @@
+{
+  "sourceRoot": "skills/component-boundary-ownership",
+  "targets": {},
+  "root": "skills/component-boundary-ownership",
+  "name": "component-boundary-ownership",
+  "projectType": "library"
+}

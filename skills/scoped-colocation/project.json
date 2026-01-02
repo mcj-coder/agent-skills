@@ -1,0 +1,7 @@
+{
+  "sourceRoot": "skills/scoped-colocation",
+  "targets": {},
+  "root": "skills/scoped-colocation",
+  "name": "scoped-colocation",
+  "projectType": "library"
+}
