@@ -48,6 +48,7 @@ the same quality gates used for production code.
 - Review feedback has been incorporated and validated.
 - All documentation checks are clean (zero warnings and errors; see `quality-gate-enforcement`).
 - Plans in `docs/plans/` use `templates/plan_template.md` and include task status and verification evidence.
+- Documentation language is explicitly configured (user-confirmed), while code constructs remain en-US.
 
 ---
 
@@ -55,6 +56,7 @@ the same quality gates used for production code.
 
 1. **Source Review**: Inspect the source code or system being documented to ensure the documentation reflects current reality.
 2. **Implementation**: Draft or update the documentation following the repository's templates and style guides.
+   - Confirm the documentation/comment language with the user and configure CSpell language settings accordingly.
 3. **Automated Verification**:
     - Run Markdown linters to ensure structural correctness.
     - Run spell-checkers to identify typos.

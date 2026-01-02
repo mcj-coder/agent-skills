@@ -1,6 +1,14 @@
 ﻿{
   "version": "0.2",
-  "language": "en",
+  "language": "en-US",
+  "languageSettings": [
+    {
+      "languageId": [
+        "markdown"
+      ],
+      "locale": "en-GB,en-US"
+    }
+  ],
   "words": [
     "ADR",
     "ADRs",
