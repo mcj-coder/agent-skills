@@ -1,0 +1,87 @@
+---
+name: component-boundary-ownership
+description: >
+  Use this skill when deciding where functionality should live (slice-local vs
+  shared), ensuring clear ownership, minimal coupling, and correct placement
+  aligned to reuse evidence and deployment boundaries.
+---
+
+# Component Boundary & Ownership Review
+
+## Intent
+Ensure functionality is located in the correct boundary with clear ownership,
+avoiding premature abstraction and accidental coupling.
+
+---
+
+## When to Use
+- Introducing new functionality that might be reused
+- Reviewing PRs that move code across boundaries
+- Deciding whether something is slice-local or shared
+- Resolving duplication across components
+
+---
+
+## Precondition Failure Signal
+- Functionality placed in shared areas without proven reuse
+- Slice-local logic extracted prematurely “for future reuse”
+- Ownership is unclear (who maintains this code?)
+- Coupling increases because shared code pulls in unrelated dependencies
+
+---
+
+## Postcondition Success Signal
+- Functionality is placed where it best matches current usage and ownership
+- Shared abstractions exist only when reuse is real and justified
+- Boundaries are explicit and support independent build/test/deploy
+- Duplication decisions are intentional and reviewable
+
+---
+
+## Example Test / Validation
+- Demonstrate reuse evidence (multiple consumers) before extracting
+- Verify moving code does not introduce cross-slice coupling
+- Confirm ownership and responsibility are clear post-change
+
+---
+
+## Common Red Flags / Guardrail Violations
+- “We might need this elsewhere later”
+- Creating shared utilities to avoid small duplication
+- Adding dependencies to shared libraries that force consumers to import unrelated concerns
+- Moving code from other repos without checking other consumers
+
+---
+
+## Recommended Review Personas
+- **Tech Lead** – validates boundaries, ownership, and YAGNI discipline
+- **Architecture/Domain Expert** – validates coupling/cohesion and design intent
+- **Platform Engineer** – validates build/deploy boundary implications
+
+---
+
+## Skill Priority
+P2 – Consistency & Governance
+
+---
+
+## Conflict Resolution Rules
+- Default to slice-local unless reuse is proven
+- If duplication exists, prefer extracting only the stable, minimal shared portion
+- If reuse scope is unclear across repos/projects, escalate before relocation
+
+---
+
+## Conceptual Dependencies
+- incremental-change-impact
+- scoped-colocation
+
+---
+
+## Classification
+Governance
+
+---
+
+## Notes
+The goal is not “maximum reuse”; it is “minimum coupling with justified reuse.”

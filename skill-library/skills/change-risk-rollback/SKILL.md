@@ -1,0 +1,89 @@
+---
+name: change-risk-rollback
+description: >
+  Use this skill whenever a change is intended for release or deployment to
+  assess operational risk, identify failure modes, and ensure rollback paths are
+  explicit and realistic.
+---
+
+# Change Risk & Rollback Assessment
+
+## Intent
+Assess the operational risk of changes and ensure rollback options are explicit,
+tested where possible, and aligned to traceability practices.
+
+---
+
+## When to Use
+- Before releasing or deploying significant changes
+- When touching critical paths, data handling, auth, or infrastructure
+- When introducing migrations or behavioural changes with user impact
+
+---
+
+## Precondition Failure Signal
+- No clear failure modes or rollback strategy exists
+- Rollback depends on guesswork or mutable deployments
+- Risk is described qualitatively without concrete triggers/mitigations
+- Deployment plan lacks version/tag traceability
+
+---
+
+## Postcondition Success Signal
+- Key risks and failure modes are identified and bounded
+- Rollback options are explicit and traceable to versions/tags
+- Mitigations are aligned to quality gates and environment traceability
+- Decision to proceed is reviewable and justified
+
+---
+
+## Example Test / Validation
+- For a change, identify at least one failure mode and define a rollback path
+- Verify rollback candidate versions/tags can be identified from traceability records
+- Confirm mitigations are in place for highest-likelihood/highest-impact failures
+
+---
+
+## Common Red Flags / Guardrail Violations
+- “We can just hotfix it”
+- Relying on manual steps without documentation
+- Deploying without tags, making rollback ambiguous
+- Treating rollback as “restore from backup” without feasibility validation
+
+---
+
+## Recommended Review Personas
+- **Tech Lead** – validates risk framing and scope discipline
+- **Platform/DevOps Engineer** – validates deployment/rollback feasibility
+- **Domain Expert** – validates business/functional failure impacts
+- **Security Reviewer** – validates integrity risks where applicable
+
+---
+
+## Skill Priority
+P0 – Safety & Integrity
+
+---
+
+## Conflict Resolution Rules
+- Overrides delivery pressure when rollback/risk is unclear
+- Requires traceability (versions/tags); no rollback plan without provenance
+- If risk cannot be bounded, escalate and defer release
+
+---
+
+## Conceptual Dependencies
+- incremental-change-impact
+- release-tagging-plan
+- environment-traceability
+
+---
+
+## Classification
+Core  
+Governance
+
+---
+
+## Notes
+Rollback is not a plan if it cannot be executed from recorded state.

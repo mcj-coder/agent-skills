@@ -1,0 +1,90 @@
+---
+name: ci-cd-conformance
+description: >
+  Use this skill when creating or changing pipelines to ensure they conform to
+  monorepo standards: incremental execution, immutable releases, tag-based
+  deployments, and required quality gates.
+---
+
+# CI/CD Pipeline Conformance Review
+
+## Intent
+Ensure CI/CD pipelines enforce the repository’s operating contract: quality,
+traceability, incremental execution, and immutability.
+
+---
+
+## When to Use
+- Creating new pipelines for a component
+- Modifying build/test/release/deploy pipelines
+- Reviewing pipeline drift or exceptions
+
+---
+
+## Precondition Failure Signal
+- Pipelines rebuild/retest/redeploy everything without justification
+- Pipelines allow deployment from mutable refs (branches)
+- Required quality checks are missing or non-blocking
+- Tagging/versioning is inconsistent or absent
+
+---
+
+## Postcondition Success Signal
+- Pipelines run the right scope based on impact
+- Quality gates are enforced and reproducible
+- Releases are immutable and tag-linked
+- Deployments reference explicit versions/tags
+- Exceptions are explicit and reviewed
+
+---
+
+## Example Test / Validation
+- Demonstrate a change triggers only impacted pipelines
+- Demonstrate pipeline fails on quality gate violations
+- Demonstrate deployment input is an immutable version/tag reference
+
+---
+
+## Common Red Flags / Guardrail Violations
+- Making checks advisory to reduce failures
+- Introducing pipeline exceptions without documentation
+- Deploying from main because “it’s simpler”
+- Skipping traceability mechanisms for non-prod environments
+
+---
+
+## Recommended Review Personas
+- **Platform/DevOps Engineer** – validates pipeline behaviour and enforcement
+- **Tech Lead** – validates alignment to operating contract and scope discipline
+- **Security Reviewer** – validates provenance and integrity controls
+
+---
+
+## Skill Priority
+P2 – Consistency & Governance  
+(Escalate to P0 when traceability/integrity controls are affected.)
+
+---
+
+## Conflict Resolution Rules
+- Pipelines must not weaken P0/P1 constraints for convenience
+- Incremental behaviour must be grounded in impact analysis
+- If requirements conflict, default to traceability and safety
+
+---
+
+## Conceptual Dependencies
+- incremental-change-impact
+- release-tagging-plan
+- quality-gate-enforcement
+
+---
+
+## Classification
+Governance  
+Operational
+
+---
+
+## Notes
+Pipelines are policy enforcement. Treat them as production code.
