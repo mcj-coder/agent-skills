@@ -1,24 +1,23 @@
 ---
 name: scoped-colocation
 description: >
-  Use this skill whenever defining, modifying, or reviewing any interface,
-  class, service, or component to ensure all related code, tests, documentation,
-  and dependencies are co-located at the narrowest meaningful scope, with shared
-  functionality extracted only when reuse across multiple slices or projects is
-  proven.
+  Use this skill whenever defining, modifying, or reviewing structure and
+  boundaries to ensure related code, tests, docs, templates, and scripts are
+  co-located at the narrowest meaningful scope (slice, shared library, monorepo,
+  or API version), with shared extraction only when reuse is proven.
 ---
 
-# Scoped Colocation & Vertical-Slice Architecture
+# Scoped Colocation & Structural Hygiene
 
 ## Intent
 
 Ensure deliverable functionality is organised as atomic vertical slices, with
-related interfaces, classes, services, tests, documentation, and supporting
-artifacts co-located at the narrowest meaningful scope.
+related interfaces, classes, services, tests, documentation, templates, and
+scripts co-located at the narrowest meaningful scope.
 
 This skill exists to preserve clarity, traceability, and ownership; enable
 independent build/test/deploy; prevent duplication and architectural drift; and
-apply DRY/YAGNI via disciplined reuse boundaries.
+apply DRY/YAGNI via disciplined reuse boundaries across repository structure.
 
 ---
 
@@ -28,6 +27,8 @@ apply DRY/YAGNI via disciplined reuse boundaries.
 - Introducing new functionality (greenfield or brownfield)
 - Reviewing boundaries, reuse decisions, or folder/namespace structure
 - Extracting shared libraries or consolidating duplicated functionality
+- Reorganising monorepo structure or shared resources
+- Placing templates, scripts, or tooling assets
 
 ---
 
@@ -35,10 +36,11 @@ apply DRY/YAGNI via disciplined reuse boundaries.
 
 - Related definitions dispersed across unrelated folders/namespaces
 - Tests or documentation detached from the functionality they validate
+- Templates/scripts stored centrally without clear ownership
 - A slice cannot be built/tested/deployed independently
 - Shared functionality duplicated across multiple slices
 - Functionality from another repository moved/modified without confirming other consumers
-- “Common/shared/utils” areas accumulate unrelated responsibilities
+- "Common/shared/utils" areas accumulate unrelated responsibilities
 
 ---
 
@@ -50,12 +52,13 @@ apply DRY/YAGNI via disciplined reuse boundaries.
 - No duplicated shared functionality exists across slices
 - External reuse scope is understood and documented before relocation/modification
 - Boundaries are minimal, intentional, and traceable
+- Templates and scripts live with their owning skill/component and are installed to shared locations only when required
 
 ---
 
 ## Process
 
-1. **Source Review**: Inspect the current file structure and identify where related logic, tests, and documentation are located.
+1. **Source Review**: Inspect the current file structure and identify where related logic, tests, docs, templates, and scripts are located.
 2. **Implementation**: Move related files into the same directory or slice-local structure.
 3. **Verification**: Run tests for the moved components to ensure all dependencies are correctly resolved.
 4. **Documentation**: Document the component's internal structure and boundaries in its local `README.md`.
@@ -74,11 +77,12 @@ apply DRY/YAGNI via disciplined reuse boundaries.
 
 ## Common Red Flags / Guardrail Violations
 
-- “We’ll tidy this up later”
-- Splitting related code “for reuse” without evidence
+- "We'll tidy this up later"
+- Splitting related code "for reuse" without evidence
 - Duplicating shared models/services instead of extracting a library
-- Creating broad “common/core/utils” folders without clear ownership
+- Creating broad "common/core/utils" folders without clear ownership
 - Moving code from another repo without validating downstream consumers
+- Centralising templates/scripts without a defined owner
 - Expanding slice scope beyond what is required for the change
 
 ---

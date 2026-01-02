@@ -12,7 +12,7 @@ Initial use of the skill library was single-skill focused and lacked concrete st
 
 We have introduced two major architectural principles:
 
-1. **Multi-Skill Application**: Agents must identify and apply *all* relevant skills for a task, rather than just one. This includes a mandatory planning phase where conflicts are resolved via a priority model and approved by the user.
+1. **Multi-Skill Application**: Agents must identify and apply _all_ relevant skills for a task, rather than just one. This includes a mandatory planning phase where conflicts are resolved via a priority model and approved by the user.
 2. **Process Adherence**: Every skill must define a mandatory `Process` section including Source Review, Implementation, Verification, Documentation, and Review steps.
 
 ## Alternatives Considered
@@ -28,5 +28,5 @@ We have introduced two major architectural principles:
 ## Skill References
 
 - `quality-gate-enforcement`
-- `monorepo-structure-hygiene`
+- `scoped-colocation`
 - `best-practice-introduction`

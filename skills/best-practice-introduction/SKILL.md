@@ -92,7 +92,7 @@ P2 – Consistency & Governance
 
 ## Conceptual Dependencies
 
-- monorepo-structure-hygiene
+- scoped-colocation
 - quality-gate-enforcement
 
 ---

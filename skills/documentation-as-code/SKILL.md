@@ -47,7 +47,7 @@ the same quality gates used for production code.
 - Documentation has been reviewed by the applicable personas (e.g., Tech Lead, Domain Expert).
 - Review feedback has been incorporated and validated.
 - All documentation checks are clean (zero warnings and errors; see `quality-gate-enforcement`).
-- Plans in `docs/plans/` use `templates/plan_template.md` and include task status and verification evidence.
+- Plans in `docs/plans/` use `skills/writing-plans/templates/plan_template.md` and include task status and verification evidence.
 - Documentation language is explicitly configured (user-confirmed), while code constructs remain en-US.
 
 ---

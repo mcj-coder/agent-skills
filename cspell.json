@@ -64,7 +64,9 @@
     "worktrees",
     "parallelisation",
     "Summarise",
-    "artefacts"
+    "artefacts",
+    "Reorganising",
+    "Centralising"
   ],
   "ignorePaths": [
     "node_modules/**",

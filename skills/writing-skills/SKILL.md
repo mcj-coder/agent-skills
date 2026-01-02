@@ -32,7 +32,7 @@ pre/post conditions, guardrails, and verification.
 
 ## Postcondition Success Signal
 
-- Skill uses `templates/skill_template.md` structure and required fields.
+- Skill uses `skills/writing-skills/templates/skill_template.md` structure and required fields.
 - Precondition and postcondition are explicit and testable.
 - Red flags and review personas are defined.
 - Documentation checks pass and review feedback is incorporated.
@@ -42,7 +42,7 @@ pre/post conditions, guardrails, and verification.
 ## Process
 
 1. **Plan**: Use `brainstorming` then `writing-plans` if the change is multi-step.
-2. **Template**: Start from `templates/skill_template.md`.
+2. **Template**: Start from `skills/writing-skills/templates/skill_template.md`.
 3. **Define Tests**: Write precondition and postcondition first.
 4. **Guardrails**: Add red flags and conflict resolution rules.
 5. **Review Personas**: Specify who validates the output.

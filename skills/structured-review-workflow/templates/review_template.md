@@ -17,7 +17,7 @@
 - Does it respect the stated scope?
 - Are precondition failures fully addressed?
 - Are postcondition success criteria demonstrably met?
-- If a plan exists, does it use `templates/plan_template.md` with task status,
+- If a plan exists, does it use `skills/writing-plans/templates/plan_template.md` with task status,
   verification evidence, and Finalization updated?
 
 ## Guardrails / Red Flags

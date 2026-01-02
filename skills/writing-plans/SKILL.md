@@ -32,17 +32,19 @@ review, and recover after interruptions.
 
 ## Postcondition Success Signal
 
-- Plan exists in `docs/plans/YYYY-MM-DD-<name>.md` using `templates/plan_template.md`.
+- Plan exists in `docs/plans/YYYY-MM-DD-<name>.md` using `skills/writing-plans/templates/plan_template.md`.
 - Tasks are atomic and follow RED -> GREEN -> REFACTOR -> COMMIT.
 - Each task includes exact file paths and verification commands.
 - The user approves the plan before execution begins.
+- Required review evidence is recorded before marking the plan Delivered.
+- Plan is only marked Delivered with explicit user permission.
 
 ---
 
 ## Process
 
 1. **Source Review**: Read the design and identify impacted components.
-2. **Structure**: Use `templates/plan_template.md`.
+2. **Structure**: Use `skills/writing-plans/templates/plan_template.md`.
 3. **Decompose**: Split into 2-5 minute tasks.
 4. **Specify**: For each task, include:
    - Exact file paths (create/modify/test).
@@ -50,9 +52,17 @@ review, and recover after interruptions.
    - Commands to run and expected outcomes.
    - Commit guidance.
 5. **Verification**: Ensure plan tasks include explicit verification steps.
-6. **Approval**: Present plan and wait for user approval.
-7. **Handover**: Offer execution via `executing-plans` or
-   `subagent-driven-development` (if tasks are independent).
+6. **Install Plan Verification**: Copy
+   `skills/writing-plans/scripts/verify-plans.js` to `scripts/verify-plans.js`
+   when plan verification is required in this repo.
+7. **Approval**: Present plan and wait for user approval.
+8. **Review**: Request review from Lead Developer and Architect personas for
+   plan quality and boundary alignment, and record their collated feedback,
+   agreed next steps, and any follow-up plan link in the plan document.
+9. **Deliver Gate**: Ask for explicit user permission before marking the plan
+   Delivered.
+10. **Handover**: Offer execution via `executing-plans` or
+    `subagent-driven-development` (if tasks are independent).
 
 ---
 
@@ -68,6 +78,9 @@ review, and recover after interruptions.
 - Missing verification steps or expected outputs.
 - Plans that skip RED-GREEN-REFACTOR.
 - Proceeding to execution without approval.
+- Marking a plan Delivered before required review evidence is recorded.
+- Capturing review feedback outside the plan without summarizing it there.
+- Marking Delivered without explicit user permission.
 
 ---
 
@@ -75,6 +88,8 @@ review, and recover after interruptions.
 
 - **Tech Lead** - validates architecture alignment and scope.
 - **Software Engineer** - validates task granularity and feasibility.
+- **Lead Developer** - validates plan quality and sequencing.
+- **Architect** - validates boundaries, colocation, and reuse decisions.
 
 ---
 
@@ -108,3 +123,5 @@ Core
 ## Notes
 
 Plans are the recovery point for interruptions. Make them explicit and complete.
+If `verify-plans.js` changes, re-install it from
+`skills/writing-plans/scripts/verify-plans.js` into `scripts/verify-plans.js`.

@@ -40,6 +40,8 @@ Ensure that all completed work is objectively verified through evidence before a
 - A final line-by-line requirements check has been performed.
 - Compilation and quality gates (LTS, zero warnings) are verified green (see `quality-gate-enforcement`).
 - Plan/task status is only updated to complete after evidence is documented (no retroactive proof).
+- If the plan requires review, review evidence is recorded before marking Delivered.
+- Delivered status requires explicit user permission.
 
 ---
 
@@ -51,7 +53,9 @@ Ensure that all completed work is objectively verified through evidence before a
 4. **Verify**: Does the output explicitly confirm the claim?
 5. **Document**: Record evidence first, then state the claim WITH the supporting evidence (or a reference to it).
 6. **Update Status**: Only after Step 5, update any plan/task status to Done/Delivered and include the evidence reference.
-7. **Handover**: For final completion, perform a "VCS check" (diff review) to ensure no unintended changes or debug code are included.
+7. **Review Gate**: If the plan requires review, record the review outcome before marking Delivered.
+8. **User Gate**: Ask for explicit user permission before marking Delivered.
+9. **Handover**: For final completion, perform a "VCS check" (diff review) to ensure no unintended changes or debug code are included.
 
 ---
 
@@ -71,6 +75,8 @@ Ensure that all completed work is objectively verified through evidence before a
 - Relying on partial verification (e.g., "Linter passed, so build will pass").
 - Skipping verification because of "time pressure" or exhaustion.
 - Updating plan/task status before evidence is written down.
+- Marking Delivered while review-required items are still pending.
+- Marking Delivered without explicit user permission.
 
 ---
 

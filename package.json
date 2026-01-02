@@ -22,7 +22,7 @@
     "docs/plans/**/*.md": [
       "node scripts/verify-plans.js"
     ],
-    "templates/plan_template.md": [
+    "skills/writing-plans/templates/plan_template.md": [
       "node scripts/verify-plans.js"
     ]
   },

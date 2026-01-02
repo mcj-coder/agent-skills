@@ -20,11 +20,11 @@
 
 ## Task Checklist
 
-|ID|Task|Status|Verification|Evidence|
-|---|---|---|---|---|
-|1||Planned|||
-|2||Planned|||
-|3||Planned|||
+| ID  | Task | Status  | Verification | Evidence |
+| --- | ---- | ------- | ------------ | -------- |
+| 1   |      | Planned |              |          |
+| 2   |      | Planned |              |          |
+| 3   |      | Planned |              |          |
 
 Notes:
 
