@@ -6,4 +6,5 @@ node_modules/
 .vs/
 .idea/
 .tmp/
+.worktrees/
 .DS_Store
